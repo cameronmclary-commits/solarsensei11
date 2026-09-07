@@ -1169,6 +1169,29 @@ img {
 .faq-card h3{ font-size:15px; margin:0 0 8px; }
 .faq-card p{ font-size:14px; color:var(--muted); margin:0; line-height:1.55; }
 
+/* Guides grid */
+.guides-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.guide-card{ background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:28px; position:relative; display:flex; flex-direction:column; transition:transform var(--transition), box-shadow var(--transition); }
+.guide-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+.guide-card.coming-soon{ opacity:.85; }
+.guide-soon-badge{ position:absolute; top:16px; right:16px; background:var(--soft); border:1px dashed var(--line); color:var(--muted); font-size:11px; font-weight:900; letter-spacing:.08em; padding:5px 10px; border-radius:999px; }
+.guide-card-tags{ margin-bottom:16px; }
+.guide-tag{ display:inline-block; font-size:12px; font-weight:900; letter-spacing:.08em; padding:6px 14px; border-radius:999px; }
+.guide-card h3{ font-family:Georgia,serif; font-size:22px; line-height:1.25; margin:0 0 12px; }
+.guide-card > p{ font-size:15px; color:var(--muted); margin:0; line-height:1.55; flex:1; }
+.guide-card-foot{ display:flex; justify-content:space-between; align-items:center; margin-top:20px; padding-top:16px; border-top:1px dashed var(--line); }
+.guide-time{ font-size:13px; color:var(--muted); }
+.guide-link{ font-size:14px; font-weight:800; color:var(--teal); text-decoration:none; transition:color var(--transition); }
+.guide-link:hover{ color:var(--orange); }
+
+@media (max-width: 1100px) {
+  .guides-grid{ grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  .guides-grid{ grid-template-columns:1fr; }
+}
+
 /* Final CTA */
 .final-cta{ background:var(--ink); color:#fff; border-radius:28px; padding:48px; display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center; }
 .final-cta h2{ color:#fff; font-size: clamp(28px,3.2vw,44px); line-height:1.05; letter-spacing:-.04em; margin:0 0 12px; }
