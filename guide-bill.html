@@ -35,7 +35,7 @@
         <a href="index.html#problem">Why it matters</a>
         <a href="index.html#what">What we do</a>
         <a href="index.html#visuals">Visuals</a>
-        <a href="index.html#guides">Guides</a>
+        <a href="guides.html">Guides</a>
         <a href="index.html#pricing">Pricing</a>
         <a href="index.html#faq">FAQ</a>
       </nav>
@@ -49,7 +49,7 @@
       <a href="index.html#problem">Why it matters</a>
       <a href="index.html#what">What we do</a>
       <a href="index.html#visuals">Visuals</a>
-      <a href="index.html#guides">Guides</a>
+      <a href="guides.html">Guides</a>
       <a href="index.html#pricing">Pricing</a>
       <a href="index.html#faq">FAQ</a>
       <a href="index.html#pricing" class="button primary" data-action="generate-report">Start report</a>
@@ -58,25 +58,25 @@
 
   <main class="guide-page">
     <article>
-      <div class="guide-hero">
+      <header class="guide-hero">
         <div class="wrap">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a>
             <span aria-hidden="true">›</span>
-            <a href="index.html#guides">Guides</a>
+            <a href="guides.html">Guides</a>
             <span aria-hidden="true">›</span>
             <span aria-current="page">Reading your electricity bill</span>
           </nav>
           <div class="guide-badge">✦ GUIDE · BEFORE YOU BUY</div>
-          <h1>How to read your electricity bill for solar &amp; battery analysis</h1>
+          <h1>How to read your electricity bill for solar & battery analysis</h1>
           <p class="guide-lead">Most homeowners check their bill to see what they owe. If you're considering solar panels or battery storage, it contains far more valuable information — and knowing where to look changes the quality of every decision that follows.</p>
           <div class="guide-meta">
             <span class="meta-pill">📖 8 min read</span>
-            <span class="meta-pill">🇦🇺 Australian bills &amp; tariffs</span>
+            <span class="meta-pill">🇦🇺 Australian bills & tariffs</span>
             <span class="meta-pill">✅ Reviewed for accuracy · figures are examples only</span>
           </div>
         </div>
-      </div>
+      </header>
 
       <div class="guide-layout wrap">
         <aside class="guide-toc" aria-label="Table of contents">
@@ -110,17 +110,57 @@
             <h2>What to look for on your bill</h2>
             <p>Here is an illustrative bill with the six key items highlighted. Your retailer's format will differ, but the same information appears on every Australian bill.</p>
 
-            <div class="bill-example">
+            <div class="bill-example" role="figure" aria-label="Illustrative electricity bill showing six key items">
               <div class="bill-header">
-                <strong>Everyday Energy</strong>
-                <span>Bill period: 12 Oct – 10 Nov · 30 days · Illustrative example</span>
+                <div>
+                  <strong>Everyday Energy</strong>
+                  <p style="margin:4px 0 0; font-size:13px; color:var(--muted);">Bill period: 12 Oct – 10 Nov · 30 days · Illustrative example</p>
+                </div>
               </div>
-              <div class="bill-row"><span class="bill-num" style="background:#0c9b8a;">1</span><span class="bill-label">Average daily use</span><span class="bill-value"><strong>21.6 kWh/day</strong><br><small>Total consumption this period</small></span></div>
-              <div class="bill-row"><span class="bill-num" style="background:#0c9b8a;">2</span><span class="bill-label">Tariff type</span><span class="bill-value"><strong>Time-of-use</strong><br><small>Smart meter required</small></span></div>
-              <div class="bill-row"><span class="bill-num" style="background:#e8552a;">3</span><span class="bill-label">Usage rates</span><span class="bill-value"><strong>Peak 38.2¢ · Shoulder 28.4¢ · Off-peak 16.8¢</strong><br><small>cents per kWh + supply charge $1.12/day</small></span></div>
-              <div class="bill-row"><span class="bill-num" style="background:#0c9b8a;">4</span><span class="bill-label">Solar feed-in</span><span class="bill-value"><strong>412 kWh @ 6.5¢</strong><br><small>Energy exported to the grid</small></span></div>
-              <div class="bill-row"><span class="bill-num" style="background:#0c9b8a;">5</span><span class="bill-label">Billing period</span><span class="bill-value"><strong>30 days</strong><br><small>Seasonal variation matters</small></span></div>
-              <div class="bill-row"><span class="bill-num" style="background:#e8552a;">6</span><span class="bill-label">Controlled load</span><span class="bill-value"><strong>3.1 kWh/day @ 19.4¢</strong><br><small>Separately metered hot water</small></span></div>
+              <div class="bill-body">
+                <div class="bill-row" data-num="1">
+                  <span class="bill-num" style="background:#0c9b8a;">1</span>
+                  <div class="bill-cell">
+                    <span class="bill-label">Average daily use</span>
+                    <div class="bill-value"><strong>21.6 kWh/day</strong><br><small>Total consumption this period</small></div>
+                  </div>
+                </div>
+                <div class="bill-row" data-num="2">
+                  <span class="bill-num" style="background:#0c9b8a;">2</span>
+                  <div class="bill-cell">
+                    <span class="bill-label">Tariff type</span>
+                    <div class="bill-value"><strong>Time-of-use</strong><br><small>Smart meter required</small></div>
+                  </div>
+                </div>
+                <div class="bill-row" data-num="3">
+                  <span class="bill-num" style="background:#e8552a;">3</span>
+                  <div class="bill-cell">
+                    <span class="bill-label">Usage rates</span>
+                    <div class="bill-value"><strong>Peak 38.2¢ · Shoulder 28.4¢ · Off-peak 16.8¢</strong><br><small>cents per kWh + supply charge $1.12/day</small></div>
+                  </div>
+                </div>
+                <div class="bill-row" data-num="4">
+                  <span class="bill-num" style="background:#0c9b8a;">4</span>
+                  <div class="bill-cell">
+                    <span class="bill-label">Solar feed-in</span>
+                    <div class="bill-value"><strong>412 kWh @ 6.5¢</strong><br><small>Energy exported to the grid</small></div>
+                  </div>
+                </div>
+                <div class="bill-row" data-num="5">
+                  <span class="bill-num" style="background:#0c9b8a;">5</span>
+                  <div class="bill-cell">
+                    <span class="bill-label">Billing period</span>
+                    <div class="bill-value"><strong>30 days</strong><br><small>Seasonal variation matters</small></div>
+                  </div>
+                </div>
+                <div class="bill-row" data-num="6">
+                  <span class="bill-num" style="background:#e8552a;">6</span>
+                  <div class="bill-cell">
+                    <span class="bill-label">Controlled load</span>
+                    <div class="bill-value"><strong>3.1 kWh/day @ 19.4¢</strong><br><small>Separately metered hot water</small></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <p class="bill-caption">Illustrative layout with example figures. Rates vary by retailer, network and state.</p>
 
@@ -161,7 +201,7 @@
             </div>
 
             <div class="numbered-section">
-              <h3><span class="num-circle" style="background:#0c9b8a;">5</span> Billing period &amp; seasonal variation</h3>
+              <h3><span class="num-circle" style="background:#0c9b8a;">5</span> Billing period & seasonal variation</h3>
               <p>Check the dates on your bill. Consumption varies significantly between summer and winter due to heating, cooling and daylight hours.</p>
               <div class="why-box">
                 <div class="why-label">WHY IT MATTERS</div>
@@ -170,7 +210,7 @@
             </div>
 
             <div class="numbered-section">
-              <h3><span class="num-circle" style="background:#e8552a;">6</span> Controlled loads &amp; special tariffs</h3>
+              <h3><span class="num-circle" style="background:#e8552a;">6</span> Controlled loads & special tariffs</h3>
               <p>Some bills show separate charges for controlled loads such as hot water, electric vehicle tariffs with special overnight rates, or demand charges for larger households.</p>
               <div class="why-box">
                 <div class="why-label">WHY IT MATTERS</div>
@@ -197,7 +237,7 @@
                 <h3>Time-of-use tariff</h3>
                 <ul>
                   <li>Peak: typically 4pm–9pm</li>
-                  <li>Shoulder: daytime &amp; early evening</li>
+                  <li>Shoulder: daytime & early evening</li>
                   <li>Off-peak: overnight (varies by retailer)</li>
                 </ul>
                 <span class="format-badge">URBAN AREAS · SMART METERS</span>
@@ -323,7 +363,7 @@
           <a class="button primary" href="index.html#pricing" style="display:inline-block; border-radius:999px; padding:16px 28px; font-size:16px;">Start your free analysis →</a>
           <div class="bottom-cta-pills">
             <span>No sign-up required</span>
-            <span>📍 Brisbane &amp; surrounding areas</span>
+            <span>📍 Brisbane & surrounding areas</span>
             <span>Indicative modelling — not a quote</span>
           </div>
         </div>
@@ -346,7 +386,7 @@
           </a>
           <a href="index.html#pricing" class="keep-card">
             <div class="keep-tag">FREE TOOL</div>
-            <h3>Solar &amp; battery calculator</h3>
+            <h3>Solar & battery calculator</h3>
             <p>Model hundreds of configurations against your own bill.</p>
           </a>
         </div>

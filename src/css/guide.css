@@ -81,7 +81,7 @@
 /* Layout */
 .guide-layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 64px;
   padding-top: 48px;
   padding-bottom: 80px;
@@ -96,6 +96,9 @@
   border-radius: 14px;
   padding: 24px;
   background: var(--surface);
+  height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 
 .toc-label {
@@ -117,15 +120,21 @@
   font-size: 14px;
   color: var(--muted);
   text-decoration: none;
-  padding: 6px 0;
-  transition: color var(--transition);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background var(--transition), color var(--transition);
 }
 
 .guide-toc a:hover {
   color: var(--teal);
+  background: color-mix(in srgb, var(--teal) 8%, transparent);
 }
 
 /* Content */
+.guide-content {
+  max-width: 800px;
+}
+
 .guide-content h2 {
   font-family: Georgia, serif;
   font-size: clamp(28px, 3vw, 42px);
@@ -180,55 +189,72 @@
   border-radius: 18px;
   overflow: hidden;
   margin: 24px 0;
+  box-shadow: var(--shadow);
 }
 
 .bill-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 24px;
+  padding: 20px 24px;
   background: rgba(255, 255, 255, .06);
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   font-size: 15px;
 }
 
-.bill-header span {
-  color: #96a7b5;
-  font-size: 13px;
+.bill-header strong {
+  color: #f8f3e8;
+  font-size: 17px;
+}
+
+.bill-body {
+  padding: 8px;
 }
 
 .bill-row {
   display: grid;
-  grid-template-columns: 40px 180px 1fr;
+  grid-template-columns: 44px 1fr;
   gap: 16px;
   align-items: center;
-  padding: 16px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  padding: 14px 20px;
+  border-radius: 10px;
+  transition: background var(--transition);
 }
 
-.bill-row:last-child {
-  border-bottom: 0;
+.bill-row:hover {
+  background: rgba(255, 255, 255, .04);
+}
+
+.bill-row + .bill-row {
+  margin-top: 4px;
 }
 
 .bill-num {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 900;
+  flex-shrink: 0;
+}
+
+.bill-cell {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  align-items: center;
 }
 
 .bill-label {
   font-size: 15px;
   color: #cbd5e1;
+  font-weight: 600;
 }
 
 .bill-value {
   text-align: right;
   font-size: 15px;
+  line-height: 1.5;
 }
 
 .bill-value strong {
@@ -249,36 +275,39 @@
 
 /* Numbered sections */
 .numbered-section {
-  margin: 40px 0;
+  margin: 48px 0;
+  padding-left: 0;
 }
 
 .numbered-section h3 {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  align-items: flex-start;
+  gap: 16px;
   font-family: Georgia, serif;
   font-size: 22px;
-  margin: 0 0 12px;
+  line-height: 1.3;
+  margin: 0 0 14px;
 }
 
 .num-circle {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 900;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .why-box {
   background: var(--peach);
   border-left: 4px solid var(--orange);
   border-radius: 0 12px 12px 0;
-  padding: 16px 20px;
-  margin: 16px 0;
+  padding: 18px 22px;
+  margin: 18px 0;
 }
 
 .why-label {
@@ -287,13 +316,19 @@
   letter-spacing: .1em;
   color: var(--orange);
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .why-box p {
   font-size: 15px;
   margin: 0;
   color: var(--text);
+  line-height: 1.55;
+}
+
+.why-box a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* Format cards */
@@ -301,44 +336,57 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin: 24px 0;
+  margin: 28px 0;
 }
 
 .format-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 24px;
+  padding: 28px 24px;
   position: relative;
   overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.format-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .format-bar {
   height: 4px;
   border-radius: 2px;
-  margin-bottom: 16px;
+  margin: -28px -24px 20px;
 }
 
 .format-card h3 {
-  font-size: 18px;
-  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  margin: 0 0 14px;
+  line-height: 1.3;
 }
 
 .format-card ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 .format-card li {
-  padding: 5px 0;
+  padding: 6px 0;
   font-size: 15px;
   color: var(--muted);
+  position: relative;
+  padding-left: 18px;
 }
 
 .format-card li::before {
-  content: "• ";
+  content: "•";
+  position: absolute;
+  left: 0;
   color: var(--muted);
+  font-weight: 900;
 }
 
 .format-badge {
@@ -357,24 +405,24 @@
 .blind-spots-box {
   background: var(--peach);
   border-radius: 18px;
-  padding: 32px;
-  margin: 24px 0;
+  padding: 36px;
+  margin: 28px 0;
 }
 
 .blind-spots-box h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
-  margin: 0 0 16px;
+  font-size: 24px;
+  margin: 0 0 20px;
 }
 
 .cross-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 .cross-list li {
-  padding: 8px 0 8px 28px;
+  padding: 10px 0 10px 36px;
   position: relative;
   font-size: 16px;
   line-height: 1.55;
@@ -385,15 +433,23 @@
   content: "✕";
   position: absolute;
   left: 0;
+  top: 10px;
   color: var(--orange);
   font-weight: 900;
-  font-size: 16px;
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--orange) 12%, transparent);
+  border-radius: 50%;
 }
 
 .blind-spots-box > p {
   font-size: 16px;
   color: var(--muted);
   margin: 0;
+  line-height: 1.6;
 }
 
 /* Steps grid */
@@ -401,33 +457,41 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin: 24px 0;
+  margin: 28px 0;
 }
 
 .step-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 24px;
+  padding: 28px 20px;
   text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .step-num {
   display: inline-grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--lime);
   color: var(--ink);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .step-card h3 {
-  font-size: 17px;
-  margin: 0 0 8px;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin: 0 0 10px;
+  line-height: 1.3;
 }
 
 .step-card p {
@@ -442,27 +506,28 @@
   background: color-mix(in srgb, var(--teal) 8%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--teal) 25%, var(--line));
   border-radius: 18px;
-  padding: 36px;
+  padding: 40px;
   margin: 48px 0;
+  text-align: center;
 }
 
 .guide-cta-box h3 {
   font-family: Georgia, serif;
-  font-size: 24px;
-  margin: 0 0 10px;
+  font-size: 26px;
+  margin: 0 0 12px;
 }
 
 .guide-cta-box p {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--muted);
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 }
 
 /* Takeaways */
 .takeaways-box {
   background: var(--soft);
   border-radius: 18px;
-  padding: 32px;
+  padding: 36px;
   margin: 48px 0;
 }
 
@@ -472,7 +537,7 @@
   letter-spacing: .1em;
   color: var(--teal);
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .takeaways-list {
@@ -482,7 +547,7 @@
 }
 
 .takeaways-list li {
-  padding: 6px 0 6px 28px;
+  padding: 8px 0 8px 32px;
   position: relative;
   font-size: 16px;
   line-height: 1.55;
@@ -494,6 +559,7 @@
   left: 0;
   color: var(--teal);
   font-weight: 900;
+  font-size: 18px;
 }
 
 /* Guide FAQ */
@@ -507,7 +573,7 @@
 
 .guide-faq details {
   border-top: 1px solid var(--line);
-  padding: 20px 0;
+  padding: 22px 0;
 }
 
 .guide-faq details:last-child {
@@ -516,12 +582,17 @@
 
 .guide-faq summary {
   font-family: Georgia, serif;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   cursor: pointer;
   list-style: none;
   position: relative;
-  padding-right: 36px;
+  padding-right: 40px;
+  transition: color var(--transition);
+}
+
+.guide-faq summary:hover {
+  color: var(--teal);
 }
 
 .guide-faq summary::-webkit-details-marker {
@@ -533,10 +604,14 @@
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1;
   color: var(--teal);
   transition: transform var(--transition);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
 }
 
 .guide-faq details[open] summary::after {
@@ -547,8 +622,8 @@
   color: var(--muted);
   font-size: 16px;
   max-width: 760px;
-  margin: 14px 0 0;
-  line-height: 1.6;
+  margin: 16px 0 0;
+  line-height: 1.65;
 }
 
 /* Bottom CTA */
@@ -622,12 +697,14 @@
   padding: 28px;
   text-decoration: none;
   color: inherit;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
 }
 
 .keep-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
+  border-color: var(--teal);
 }
 
 .keep-tag {
@@ -650,6 +727,7 @@
   font-size: 15px;
   color: var(--muted);
   margin: 0;
+  line-height: 1.55;
 }
 
 /* Responsive */
@@ -662,13 +740,17 @@
   .guide-toc {
     position: static;
     display: flex;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
     flex-wrap: wrap;
+    max-height: none;
+    overflow: visible;
+    padding: 20px;
   }
 
   .toc-label {
     margin-bottom: 0;
+    white-space: nowrap;
   }
 
   .guide-toc nav {
@@ -680,7 +762,7 @@
   .guide-toc a {
     background: var(--soft);
     border: 1px solid var(--line);
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 999px;
     font-size: 13px;
   }
@@ -707,18 +789,39 @@
     font-size: 32px;
   }
 
+  .guide-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .bill-row {
-    grid-template-columns: 32px 1fr;
-    gap: 10px;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .bill-cell {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .bill-label {
-    grid-column: 2;
+    font-size: 13px;
   }
 
   .bill-value {
-    grid-column: 2;
     text-align: left;
+  }
+
+  .numbered-section h3 {
+    font-size: 20px;
+    gap: 12px;
+  }
+
+  .num-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
   }
 
   .steps-grid {
@@ -726,6 +829,62 @@
   }
 
   .guide-bottom-cta {
-    padding: 48px 0;
+    padding: 56px 0;
   }
+
+  .blind-spots-box {
+    padding: 24px;
+  }
+
+  .cross-list li {
+    padding-left: 32px;
+  }
+
+  .cross-list li::before {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .bill-example {
+  background: #0a121a;
+}
+
+[data-theme="dark"] .bill-header {
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .08);
+}
+
+[data-theme="dark"] .bill-row:hover {
+  background: rgba(255, 255, 255, .03);
+}
+
+[data-theme="dark"] .format-card,
+[data-theme="dark"] .step-card,
+[data-theme="dark"] .keep-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+[data-theme="dark"] .guide-cta-box {
+  background: color-mix(in srgb, var(--teal) 10%, var(--surface));
+  border-color: color-mix(in srgb, var(--teal) 30%, var(--line));
+}
+
+[data-theme="dark"] .guide-toc a:hover {
+  background: color-mix(in srgb, var(--teal) 10%, transparent);
+}
+
+[data-theme="dark"] .bill-value small {
+  color: #8aa0b5;
+}
+
+[data-theme="dark"] .bill-label {
+  color: #b0c5d6;
+}
+
+[data-theme="dark"] .bill-caption {
+  color: var(--muted);
 }
