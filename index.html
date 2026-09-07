@@ -152,47 +152,32 @@
         <h1 id="hero-title">Solar.<br><span class="hl-teal">Is it worth it</span><br><span class="hl-coral">for you?</span></h1>
         <p class="lead">Stop guessing. We model hundreds of solar and battery options against your actual usage — so you get an accurate, unbiased answer, even if doing nothing is the best choice.</p>
       </div>
-      <aside class="report" aria-label="Modelled report preview">
-        <div class="report-head">
-          <span class="bolt" aria-hidden="true">ϟ</span>
-          <div>
-            <div class="report-title">Current Electricity Plan</div>
-            <div class="report-sub">Time-of-use rates · standard retailer plan</div>
-          </div>
-          <span class="pill">MODELLED</span>
+      <aside class="report sample-rec" aria-label="Sample Solar Sensei recommendation">
+        <div class="sample-head">
+          <span class="sample-pill">SAMPLE RECOMMENDATION</span>
+          <span class="sample-pill confidence">HIGH CONFIDENCE</span>
         </div>
-        <div class="metric">
-          <div class="metric-row">
-            <div>
-              <span class="tag">Best 10-year return</span>
-              <h3>6 panels (2.910 kW) <span style="color:var(--purple)">+ Battery</span></h3>
-              <div class="meta"><strong>SELF-SUFF. 79%</strong> &nbsp;&nbsp; ADJ. 10YR +$30,870</div>
-            </div>
-            <div class="saving">$2,381<small>/yr</small></div>
-          </div>
+        <h3 class="sample-title">10.7 kW Solar + 16 kWh Battery</h3>
+        <p class="sample-sub">Recommended with a battery-friendly electricity plan based on actual usage timing.</p>
+        <div class="sample-metrics">
+          <div class="smetric"><strong>$3,044</strong><span>Year 1 savings</span></div>
+          <div class="smetric"><strong>5.8 yrs</strong><span>Estimated payback</span></div>
+          <div class="smetric"><strong>$39.3k</strong><span>10-year net benefit</span></div>
+          <div class="smetric"><strong>80%</strong><span>Self-sufficiency</span></div>
         </div>
-        <div class="metric">
-          <div class="metric-row">
-            <div>
-              <span class="tag amber">Max bill savings</span>
-              <h3>Battery retrofit</h3>
-              <div class="meta"><strong>SELF-SUFF. 84%</strong> &nbsp;&nbsp; ADJ. 10YR +$29,003</div>
-            </div>
-            <div class="saving">$2,427<small>/yr</small></div>
+        <div class="sample-viz">
+          <div class="sviz-card">
+            <div class="sviz-label">Savings by driver</div>
+            <div class="sviz-bars" aria-hidden="true"><span style="height:68%"></span><span style="height:52%"></span><span style="height:34%"></span><span style="height:22%"></span></div>
+          </div>
+          <div class="sviz-card donut">
+            <div class="sviz-label">Self-sufficiency</div>
+            <div class="donut-ring" aria-hidden="true"><span>80%</span></div>
           </div>
         </div>
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>Typical daily profile</span>
-            <small>Hourly energy flows</small>
-          </div>
-          <div class="chart-wrapper" style="height: 210px; position: relative;">
-            <canvas id="energyChart" aria-label="Daily energy flow chart showing solar generation, grid import, battery discharge, and solar export over 24 hours" role="img"></canvas>
-          </div>
-          <div class="axis" aria-hidden="true">
-            <span>12am</span><span>6am</span><span>12pm</span><span>6pm</span><span>11pm</span>
-          </div>
-          <div class="legend" id="chartLegend" role="legend" aria-label="Chart legend"></div>
+        <div class="sample-callout">
+          <strong>Peak usage detected</strong>
+          <p>Evening imports drive most avoidable cost.</p>
         </div>
         <p class="note">Modelled example — your report runs this analysis on your actual electricity data.</p>
       </aside>
@@ -236,6 +221,31 @@
       </div>
     </section>
 
+    <section class="section decision-layer" id="decision-layer" aria-labelledby="decision-title" style="background:var(--soft); border-top:1px solid var(--line);">
+      <div class="wrap">
+        <div class="kicker">A BETTER DECISION LAYER</div>
+        <h2 id="decision-title" style="max-width:780px;">Not a generic calculator. A visual decision report.</h2>
+        <p class="intro" style="margin-bottom:40px;">Solar Sensei is designed to make a complex, high-cost decision simple. It shows what is driving your bill, which plan fits, whether solar or a battery makes sense, and where the savings come from.</p>
+        <div class="audience" role="list">
+          <article role="listitem">
+            <div style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, var(--teal), #3b82f6); color:#fff; font-weight:900; margin-bottom:14px;">01</div>
+            <h3>Actual usage timing</h3>
+            <p>Interval-data visuals show when the home imports, exports and pays the most for electricity.</p>
+          </article>
+          <article role="listitem">
+            <div style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, var(--teal), #3b82f6); color:#fff; font-weight:900; margin-bottom:14px;">02</div>
+            <h3>Specific plan comparison</h3>
+            <p>Current plan and alternative plans are compared across no-system, solar-only and solar + battery scenarios.</p>
+          </article>
+          <article role="listitem">
+            <div style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, var(--teal), #3b82f6); color:#fff; font-weight:900; margin-bottom:14px;">03</div>
+            <h3>Clear recommendation logic</h3>
+            <p>Savings attribution, payback curves and solution matrices explain why the recommended option wins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="what" aria-labelledby="what-title">
       <div class="wrap">
         <div class="section-head">
@@ -261,6 +271,23 @@
               <li>The cost of doing nothing</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section what-youll-learn" id="learn" aria-labelledby="learn-title">
+      <div class="wrap">
+        <div style="text-align:center; max-width:860px; margin:0 auto 48px;">
+          <div class="kicker">WHAT YOU'LL LEARN</div>
+          <h2 id="learn-title">Your report answers the questions that matter before you invest.</h2>
+        </div>
+        <div class="learn-grid" role="list">
+          <article role="listitem"><div class="learn-num">1</div><h3>Am I on the right electricity plan?</h3><p>Compare your current plan against alternatives using your real usage profile.</p></article>
+          <article role="listitem"><div class="learn-num">2</div><h3>Is solar worth it for my home?</h3><p>See the best solar size, expected generation, export, savings, and payback.</p></article>
+          <article role="listitem"><div class="learn-num">3</div><h3>Do I actually need a battery?</h3><p>Understand battery size, utilisation, peak offset value, and additional savings.</p></article>
+          <article role="listitem"><div class="learn-num">4</div><h3>What will my bill look like?</h3><p>Compare today's annual cost with plan switching, solar-only, and solar + battery scenarios.</p></article>
+          <article role="listitem"><div class="learn-num">5</div><h3>Where do the savings come from?</h3><p>Separate plan optimisation, solar self-consumption, battery discharge, and feed-in credits.</p></article>
+          <article role="listitem"><div class="learn-num">6</div><h3>How confident is the recommendation?</h3><p>Review the data-confidence summary, assumptions, methodology, and caveats.</p></article>
         </div>
       </div>
     </section>
@@ -314,6 +341,28 @@
             <div class="vc-legend"><span><i style="background:#d9a021"></i>Solar generation</span><span><i style="background:#3fa08a"></i>Solar self-use</span><span><i style="background:#a855f7"></i>Battery discharge</span><span><i style="background:#f0563a"></i>Grid import</span><span><i style="background:#2b4c7e"></i>Shoulder period</span></div>
             <p class="vc-insight"><strong>Modelled illustration.</strong> Tariff periods shown are exactly what drives whether solar, storage or a plan change helps you most.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section whats-included-card" id="included-card" aria-labelledby="included-card-title" style="background:var(--soft);">
+      <div class="wrap">
+        <div style="text-align:center; max-width:800px; margin:0 auto 40px;">
+          <div class="kicker">WHAT'S INCLUDED</div>
+          <h2 id="included-card-title">A complete personalised energy report.</h2>
+          <p class="intro">Financial, technical, and plan-specific detail to help you make a confident decision.</p>
+        </div>
+        <div class="included-card">
+          <div class="included-card-grid" role="list">
+            <article role="listitem"><div class="check">✓</div><div><h3>Executive Recommendation</h3><p>Solar size, battery size, electricity plan, savings, payback, and confidence score.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Current Energy Profile</h3><p>Breakdown of usage across the day, week, and year.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Current Plan Analysis</h3><p>Reconstructed annual cost, tariff exposure, supply charges, and feed-in credits.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Electricity Plan Comparison</h3><p>Specific alternative plans under no-system, solar-only, and solar + battery scenarios.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Solar Opportunity</h3><p>Generation, self-consumption, export, savings, payback, and diminishing returns.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Battery Opportunity</h3><p>Peak-offset value, battery utilisation, backup potential, and incremental savings.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Savings Attribution</h3><p>Clear breakdown of where projected savings come from.</p></div></article>
+            <article role="listitem"><div class="check">✓</div><div><h3>Methodology &amp; Assumptions</h3><p>Transparent modelling approach, assumptions, and caveats.</p></div></article>
+          </div>
         </div>
       </div>
     </section>
@@ -375,6 +424,21 @@
         <div class="signature-card">
           <div class="kicker" style="color:#fff; text-transform:none; letter-spacing:0; font-size:17px;">Example Solar Sensei finding</div>
           <p style="color:#cbd5e1; font-size:15px; margin:12px 0 0;">Evening imports represent 31% of imported energy but 46% of usage charges. That is why the recommended 16 kWh battery targets the 5pm–9pm peak window instead of simply maximising solar size.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="audience2" aria-labelledby="audience2-title">
+      <div class="wrap">
+        <div style="text-align:center; max-width:860px; margin:0 auto 48px;">
+          <div class="kicker">WHO IT'S FOR</div>
+          <h2 id="audience2-title">Useful whether you already have solar or are starting from scratch.</h2>
+        </div>
+        <div class="audience" style="grid-template-columns:repeat(4,1fr)" role="list">
+          <article role="listitem"><h3>No solar yet</h3><p>Find the best solar size, plan, expected savings, payback, and whether a battery makes sense.</p></article>
+          <article role="listitem"><h3>Already have solar</h3><p>See export behaviour, self-consumption, plan fit, and whether a battery retrofit is worthwhile.</p></article>
+          <article role="listitem"><h3>Considering a battery</h3><p>Understand sensible battery size and value from peak offset, backup, or grid charging.</p></article>
+          <article role="listitem"><h3>High bill concerns</h3><p>Identify whether the issue is timing, tariff exposure, supply charges, or plan mismatch.</p></article>
         </div>
       </div>
     </section>
@@ -498,6 +562,21 @@
           <p>Solar Sensei was developed by a former solar consultant as the tool needed to do the job well. It's what the industry has been crying out for — offered to encourage informed consumer decisions and positive solar experiences.</p>
         </div>
 </div>
+    </section>
+
+    <section class="section cta-blobs" aria-labelledby="cta-blobs-title">
+      <div class="wrap">
+        <div class="blobs-cta">
+          <div class="kicker" style="color:var(--teal2)">READY TO SEE YOUR REPORT?</div>
+          <h2 id="cta-blobs-title">Find the energy upgrade that actually fits your home.</h2>
+          <p>Authorise your electricity data and receive a personalised Solar Sensei report showing your current plan fit, best plan options, solar and battery recommendations, payback, projected savings, and next steps.</p>
+          <div class="blobs-actions">
+            <a class="button primary" href="#pricing" data-action="blobs-start">Start My Solar Sensei Report</a>
+            <a class="button" href="#included-card" style="background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.22);">See What's Included</a>
+          </div>
+          <p class="fine" style="color:#8ea0b5; margin-top:20px; font-size:13px;">Projected savings are estimates and depend on tariff eligibility, usage behaviour, site conditions, final system design, and future energy prices.</p>
+        </div>
+      </div>
     </section>
 
     <!-- 8. FAQ – 6-card grid -->
