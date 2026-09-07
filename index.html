@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Solar Sensei - Back-test your electricity data against hundreds of solar and battery system combinations. Get an unbiased, ranked analysis to find the best solution for your home.">
+  <meta name="theme-color" content="#087b6b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#20d0ad" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solar Sensei - Unbiased Solar & Battery Analysis">
+  <meta property="og:description" content="Upload your interval data and receive a ranked analysis of the configurations that fit your household. No installer referrals. Vendor-neutral.">
+  <meta property="og:image" content="https://solarsensei.com/og-image.jpg">
+  <meta property="og:url" content="https://solarsensei.com/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solar Sensei - Unbiased Solar & Battery Analysis">
+  <meta name="twitter:description" content="Back-test your electricity data against hundreds of system combinations. Find the best solution for your home.">
+  <meta name="twitter:image" content="https://solarsensei.com/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+
+  <link rel="stylesheet" href="src/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+
+  <title>Solar Sensei - Unbiased Solar & Battery Analysis</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Solar Sensei",
+    "url": "https://solarsensei.com/",
+    "description": "Unbiased solar and battery system analysis for homeowners. Back-test electricity data against hundreds of configurations.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://solarsensei.com/#start",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Solar & Battery Solution Analysis",
+    "description": "Models system combinations against household interval data to rank outcomes by ROI, break-even, and energy independence.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Solar Sensei",
+      "url": "https://solarsensei.com/"
+    },
+    "areaServed": "AU",
+    "category": "Energy Consulting"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What data do I need to upload?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Time-of-Use data is most common and sufficient for modelling. If you can provide higher-resolution interval data (30-minute readings) we will use it for even finer analysis. Export as CSV from your retailer portal — 12 months recommended where available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between $0 and $90?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both include the same full Solar Sensei Report. The $90 option adds a 45-minute consultation for interpretation, quote comparison and next-step guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the analysis take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reports are typically generated within 24 hours of data upload. Complex scenarios with multiple tariff comparisons or battery brand modelling may take up to 48 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this require a solar quote first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Solar Sensei works with or without existing quotes. If you have quotes, we'll include them in the comparison to see how they stack up against other configurations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the report tied to specific products or installers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Solar Sensei is vendor-neutral. We model hardware-agnostic configurations and do not receive referral fees from installers or manufacturers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are savings guaranteed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Savings are projections based on available data, rates, assumptions, weather, usage behaviour, site conditions and future energy prices."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="wrap nav">
+      <div class="brand" aria-label="Solar Sensei home">SOLAR <span>SENSEI</span></div>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#problem">Why it matters</a>
+        <a href="#what">What we do</a>
+        <a href="#visuals">Visuals</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="actions">
+        <button class="theme" id="theme" aria-label="Switch to dark theme">Dark mode</button>
+        <a class="button primary" href="#pricing" data-action="generate-report">Start report</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileLinks">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-links" id="mobileLinks" aria-label="Mobile navigation">
+      <a href="#problem">Why it matters</a>
+      <a href="#what">What we do</a>
+      <a href="#visuals">Visuals</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing" class="button primary" data-action="generate-report">Start report</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">Solar & Battery Solution Analysis</div>
+        <h1 id="hero-title">Back-test your electricity data against <em>hundreds</em> of system combinations.</h1>
+        <p class="lead">Solar Sensei was developed for one reason: homeowners deserve an accurate, unbiased way to identify the right solution, or to determine whether doing nothing is the best choice.</p>
+      </div>
+      <aside class="report" aria-label="Modelled report preview">
+        <div class="report-head">
+          <span class="bolt" aria-hidden="true">ϟ</span>
+          <div>
+            <div class="report-title">Current Electricity Plan</div>
+            <div class="report-sub">Time-of-use rates · standard retailer plan</div>
+          </div>
+          <span class="pill">MODELLED</span>
+        </div>
+        <div class="metric">
+          <div class="metric-row">
+            <div>
+              <span class="tag">Best 10-year return</span>
+              <h3>6 panels (2.910 kW) <span style="color:var(--purple)">+ Battery</span></h3>
+              <div class="meta"><strong>SELF-SUFF. 79%</strong> &nbsp;&nbsp; ADJ. 10YR +$30,870</div>
+            </div>
+            <div class="saving">$2,381<small>/yr</small></div>
+          </div>
+        </div>
+        <div class="metric">
+          <div class="metric-row">
+            <div>
+              <span class="tag amber">Max bill savings</span>
+              <h3>Battery retrofit</h3>
+              <div class="meta"><strong>SELF-SUFF. 84%</strong> &nbsp;&nbsp; ADJ. 10YR +$29,003</div>
+            </div>
+            <div class="saving">$2,427<small>/yr</small></div>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">
+            <span>Typical daily profile</span>
+            <small>Hourly energy flows</small>
+          </div>
+          <div class="chart-wrapper" style="height: 210px; position: relative;">
+            <canvas id="energyChart" aria-label="Daily energy flow chart showing solar generation, grid import, battery discharge, and solar export over 24 hours" role="img"></canvas>
+          </div>
+          <div class="axis" aria-hidden="true">
+            <span>12am</span><span>6am</span><span>12pm</span><span>6pm</span><span>11pm</span>
+          </div>
+          <div class="legend" id="chartLegend" role="legend" aria-label="Chart legend"></div>
+        </div>
+        <p class="note">Modelled example — your report runs this analysis on your actual electricity data.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="problem" aria-labelledby="problem-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Why this matters</div>
+            <h2 id="problem-title">Going solar should not begin with a sales assumption.</h2>
+          </div>
+          <p class="intro">Installer quotes often show what a selected system might cost. They do not always establish whether that system, a different configuration, or no purchase at all produces the best result for your household.</p>
+        </div>
+        <div class="grid3" role="list">
+          <article class="feature" role="listitem">
+            <div class="dot" aria-hidden="true"></div>
+            <h3>Your usage is not an average</h3>
+            <p>Timing matters. Morning peaks, overnight baseload, weekends and seasonal variation can materially change which system performs best.</p>
+          </article>
+          <article class="feature" role="listitem">
+            <div class="dot" aria-hidden="true"></div>
+            <h3>One quote is not a comparison</h3>
+            <p>A single proposed configuration cannot show how it ranks against smaller, larger, battery and solar-only alternatives.</p>
+          </article>
+          <article class="feature" role="listitem">
+            <div class="dot" aria-hidden="true"></div>
+            <h3>The tariff can change the answer</h3>
+            <p>Usage rates, feed-in rates and time-of-use periods may influence value as much as the hardware itself.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Why Solar Sensei – smarter report built from actual usage -->
+    <section class="section" id="why" aria-labelledby="why-title" style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+      <div class="wrap">
+        <div class="kicker">WHY SOLAR SENSEI</div>
+        <h2 id="why-title" style="max-width:900px;">A smarter solar and battery report built from actual usage — not averages.</h2>
+        <p class="intro" style="margin-bottom:40px;">Most quotes rely on estimates. Solar Sensei uses authorised interval data — Time-of-Use as standard, full interval where available — to show what will work for the customer's home, their current plan, and their usage pattern.</p>
+        <div class="audience" role="list">
+          <article role="listitem">
+            <div style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:color-mix(in srgb, var(--teal) 12%, transparent); color:var(--teal); font-weight:900; margin-bottom:14px;">01</div>
+            <h3>Built from real electricity data</h3>
+            <p>Analyse how the home uses power throughout the day, week, and year — including expensive usage windows, seasonal patterns, and export behaviour where available.</p>
+          </article>
+          <article role="listitem">
+            <div style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:color-mix(in srgb, var(--teal) 12%, transparent); color:var(--teal); font-weight:900; margin-bottom:14px;">02</div>
+            <h3>Compares specific plans</h3>
+            <p>Benchmark the current plan against better alternatives before solar, after solar, and after solar + battery.</p>
+          </article>
+          <article role="listitem">
+            <div style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:10px; background:color-mix(in srgb, var(--teal) 12%, transparent); color:var(--teal); font-weight:900; margin-bottom:14px;">03</div>
+            <h3>Explains the right system fit</h3>
+            <p>Model solar and battery options to balance savings, payback, self-sufficiency, and backup potential.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="what" aria-labelledby="what-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">What we do</div>
+            <h2 id="what-title">Turn raw usage data into a ranked shortlist.</h2>
+          </div>
+          <p class="intro">Solar Sensei models system combinations against your household's Time-of-Use data — and higher-resolution interval data where you provide it — then ranks the outcomes by the measures that matter to you.</p>
+        </div>
+        <div class="rank-panel">
+          <div class="rank-col">
+            <div class="kicker">Accurately rank solutions by</div>
+            <div class="rank-item"><span class="num" aria-hidden="true">1</span> Strongest ROI</div>
+            <div class="rank-item"><span class="num" aria-hidden="true">2</span> Fastest break-even</div>
+            <div class="rank-item"><span class="num" aria-hidden="true">3</span> Highest energy independence</div>
+          </div>
+          <div class="rank-col">
+            <div class="kicker" style="color:var(--orange)">Deeper analysis</div>
+            <ul class="arrow-list">
+              <li>Relevance of battery brand choices and plan access</li>
+              <li>Impact of alternate electricity plans</li>
+              <li>The cost of doing nothing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Charts and visuals -->
+    <section class="section visuals-dark" id="visuals" aria-labelledby="visuals-title">
+      <div class="wrap">
+        <h2 id="visuals-title">Charts and visuals that make the recommendation obvious.</h2>
+        <p class="intro" style="color:#b8c7d6; max-width:780px; margin-top:12px;">Solar Sensei is designed to be visual because that is how customers understand complex energy decisions. Every major claim is backed by a chart, comparison, or plain-English insight.</p>
+        <div class="visuals-grid" role="list">
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><div class="heatmap" aria-hidden="true"><span></span><span class="c1"></span><span></span><span class="c2"></span><span></span><span class="c1"></span><span class="c2"></span><span style="background:#ff3b6b"></span><span class="c1"></span><span></span><span></span><span class="c2"></span><span class="c2"></span><span style="background:#ff3b6b"></span><span></span><span class="c1"></span></div></div>
+            <h3>Usage Heatmap</h3>
+            <p>Shows when the home actually uses electricity.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><div class="heatmap h2" aria-hidden="true"><span></span><span class="c1"></span><span></span><span class="c1"></span><span></span><span class="c2"></span><span class="c2"></span><span style="background:#ff3b6b"></span><span class="c1"></span><span></span><span class="c1"></span><span class="c2"></span><span style="background:#ff3b6b"></span><span></span><span class="c1"></span><span class="c2"></span></div></div>
+            <h3>Cost Heatmap</h3>
+            <p>Shows which usage windows are most expensive.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><div class="matrix" aria-hidden="true"><div class="row head"><span>Plan</span><span>No system</span><span>Solar</span></div><div class="row"><span>Current</span><span>$4,624</span><span>$2,410</span></div><div class="row"><span>Battery Saver</span><span>$3,850</span><span>$1,490</span></div><div class="row"><span>High FIT</span><span>$3,996</span><span>$1,520</span></div></div></div>
+            <h3>Plan Scenario Matrix</h3>
+            <p>Compares plans across no-system, solar-only, and battery scenarios.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><div class="bars" aria-hidden="true"><span style="height:92%"></span><span style="height:48%; background:var(--teal)"></span><span style="height:78%; background:var(--teal)"></span><span style="height:62%; background:var(--teal)"></span><span style="height:38%; background:var(--teal)"></span><span style="height:45%"></span></div></div>
+            <h3>Savings Attribution</h3>
+            <p>Breaks down where projected savings come from.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><svg viewBox="0 0 300 120" aria-hidden="true" style="width:100%; height:100%"><path d="M10 80 C60 20 90 20 130 60 C170 100 210 60 290 80" fill="none" stroke="#f6ad19" stroke-width="4"/><path d="M10 90 C70 60 110 50 150 85 C190 120 240 40 290 85" fill="none" stroke="#3b82f6" stroke-width="4"/><path d="M10 100 C60 100 100 80 150 70 C200 60 240 95 290 98" fill="none" stroke="#a855f7" stroke-width="4"/></svg></div>
+            <h3>Battery Day-in-the-Life</h3>
+            <p>Shows solar charging, evening discharge, imports, exports, and battery state.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><svg viewBox="0 0 300 120" aria-hidden="true" style="width:100%; height:100%"><path d="M10 100 C80 85 150 45 290 18" fill="none" stroke="#10b981" stroke-width="4"/><circle cx="120" cy="68" r="6" fill="#f59e0b"/><line x1="10" y1="68" x2="290" y2="68" stroke="#e5e7eb" stroke-dasharray="6 6"/></svg></div>
+            <h3>Payback Curve</h3>
+            <p>Shows cumulative net position and expected break-even year.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><svg viewBox="0 0 300 120" aria-hidden="true" style="width:100%; height:100%"><circle cx="40" cy="40" r="18" fill="#f59e0b"/><circle cx="150" cy="70" r="18" fill="#14b8a6"/><circle cx="260" cy="40" r="18" fill="#a855f7"/><circle cx="260" cy="95" r="16" fill="#3b82f6"/><path d="M58 44 C95 52 120 65 132 68" stroke="#f59e0b" stroke-width="4" fill="none"/><path d="M168 68 C200 55 230 42 242 40" stroke="#a855f7" stroke-width="4" fill="none"/><path d="M168 72 C195 80 235 90 244 92" stroke="#93c5fd" stroke-width="4" fill="none"/></svg></div>
+            <h3>Energy Flow</h3>
+            <p>Explains solar-to-home, solar-to-battery, export, and grid reliance.</p>
+          </article>
+          <article class="visual-card" role="listitem">
+            <div class="visual-thumb"><svg viewBox="0 0 200 120" aria-hidden="true" style="width:100%; height:100%"><circle cx="100" cy="65" r="45" fill="#e5e7eb"/><path d="M100 65 L100 20 A45 45 0 1 1 58 88 Z" fill="#10b981"/><text x="100" y="72" text-anchor="middle" font-size="18" font-weight="900">80%</text></svg></div>
+            <h3>Self-Sufficiency Gauge</h3>
+            <p>Shows grid-independence improvement before and after the recommendation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. What's included -->
+    <section class="section" id="included" aria-labelledby="included-title" style="background:var(--soft);">
+      <div class="wrap">
+        <div class="included-grid" role="list">
+          <article role="listitem"><div class="check">✓</div><h3>Executive Recommendation</h3><p>Solar size, battery size, plan, savings, payback, and confidence score.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Energy Fingerprint</h3><p>Usage heatmaps, cost heatmaps, seasonal patterns, and peak-cost windows.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Current Plan Analysis</h3><p>Reconstructed annual cost, tariff exposure, supply charges, and feed-in credits.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Plan Comparison</h3><p>Specific alternative plans under no-system, solar-only, and battery scenarios.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Solar Opportunity</h3><p>Generation, self-consumption, export, savings, payback, and diminishing returns.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Battery Opportunity</h3><p>Battery utilisation, peak offset, backup potential, and incremental savings.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Savings Attribution</h3><p>Clear breakdown of where projected savings come from.</p></article>
+          <article role="listitem"><div class="check">✓</div><h3>Forecast + Methodology</h3><p>Payback curve, 10-year benefit, assumptions, confidence, and caveats.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. How it works – 4 steps -->
+    <section class="section how-it-works" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="kicker">HOW IT WORKS</div>
+        <h2 id="how-title">From authorised data to a clear recommendation.</h2>
+        <div class="steps" style="grid-template-columns: repeat(4, 1fr);" role="list">
+          <article class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">1</div>
+            <h3>Authorise data</h3>
+            <p>Securely provide approved Time-of-Use data so Solar Sensei can analyse imports and exports. Interval data optional for super high-res.</p>
+          </article>
+          <article class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">2</div>
+            <h3>Analyse usage + plan</h3>
+            <p>Reconstruct current cost and identify usage periods that drive the bill.</p>
+          </article>
+          <article class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">3</div>
+            <h3>Compare options</h3>
+            <p>Compare plans, solar sizes, battery sizes, and combined system options.</p>
+          </article>
+          <article class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">4</div>
+            <h3>Receive report</h3>
+            <p>Get the recommendation, visuals, payback, assumptions, and next steps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Signature insight -->
+    <section class="section signature" aria-labelledby="signature-title">
+      <div class="wrap signature-grid">
+        <div>
+          <div class="kicker" style="color:var(--teal2)">SIGNATURE INSIGHT</div>
+          <h2 id="signature-title" style="color:#fff;">Your usage timing matters more than total usage.</h2>
+          <p>Two homes can use the same annual electricity and need completely different solutions. Solar Sensei identifies whether the opportunity is plan switching, solar self-consumption, battery peak offset, feed-in credits, or a combination.</p>
+        </div>
+        <div class="signature-card">
+          <div class="kicker" style="color:#fff; text-transform:none; letter-spacing:0; font-size:17px;">Example Solar Sensei finding</div>
+          <p style="color:#cbd5e1; font-size:15px; margin:12px 0 0;">Evening imports represent 31% of imported energy but 46% of usage charges. That is why the recommended 16 kWh battery targets the 5pm–9pm peak window instead of simply maximising solar size.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="audience" aria-labelledby="audience-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Who it's for</div>
+            <h2 id="audience-title">Useful before you commit.</h2>
+          </div>
+          <p class="intro">The analysis is designed for homeowners who want evidence before making a solar or battery decision.</p>
+        </div>
+        <div class="audience" role="list">
+          <article role="listitem">
+            <h3>Comparing solar quotes</h3>
+            <p>You have proposals, but want to know whether their recommended sizes and assumptions fit your actual use.</p>
+          </article>
+          <article role="listitem">
+            <h3>Considering a battery</h3>
+            <p>You want to test whether storage improves the financial result, energy independence, or both.</p>
+          </article>
+          <article role="listitem">
+            <h3>Checking the status quo</h3>
+            <p>You are open to solar, but only if modelling shows it performs better than doing nothing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Pricing – $0 / $90 -->
+    <section class="section" id="pricing" aria-labelledby="pricing-title" style="background:var(--soft);">
+      <div class="wrap">
+        <div class="kicker">PRICING</div>
+        <h2 id="pricing-title">Choose the report option that fits your decision.</h2>
+        <p class="intro" style="margin-bottom:36px;">Both options include the same full Solar Sensei report. The premium option adds a 45-minute consultation for quote review, interpretation, and hands-on next-step support.</p>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Solar Sensei Report</h3>
+            <p class="price-sub">Full personalised automated report.</p>
+            <div class="price">$0 <small>one-off</small></div>
+            <ul class="price-list">
+              <li>Full Time-of-Use analysis (interval data if supplied)</li>
+              <li>Current plan analysis</li>
+              <li>Electricity plan comparison</li>
+              <li>Solar and battery recommendations</li>
+              <li>Visual report gallery and insights</li>
+              <li>Savings, payback, and 10-year forecast</li>
+              <li>Downloadable/shareable report</li>
+            </ul>
+            <a class="button primary" href="#start" data-action="pricing-free">Get My Report — $0</a>
+          </article>
+          <article class="price-card featured">
+            <div class="badge">DECISION SUPPORT</div>
+            <h3>Report + Consultation</h3>
+            <p class="price-sub">Full report plus a 45-minute consultant call.</p>
+            <div class="price">$90 <small>one-off</small></div>
+            <ul class="price-list">
+              <li>Everything in the $0 Solar Sensei Report</li>
+              <li>45-minute phone or video consultation</li>
+              <li>Report walkthrough and recommendation explanation</li>
+              <li>Quote comparison support</li>
+              <li>Plan and tariff discussion</li>
+              <li>Questions to ask installers</li>
+              <li>Personalised next-step action plan</li>
+            </ul>
+            <a class="button primary" href="#start" data-action="pricing-consult">Get Report + Consultation — $90</a>
+          </article>
+        </div>
+        <div class="price-foot">Already have your Solar Sensei Report? Add a 45-minute consultation later for $90.</div>
+
+        <div class="compare-table" role="table" aria-label="Feature comparison">
+          <div class="compare-head" role="row"><span role="columnheader">Feature</span><span role="columnheader">Solar Sensei Report — $0</span><span role="columnheader">Report + Consultation — $90</span></div>
+          <div class="compare-row" role="row"><span>Full automated report</span><span>Included</span><span>Included</span></div>
+          <div class="compare-row" role="row"><span>Plan, solar and battery modelling</span><span>Included</span><span>Included</span></div>
+          <div class="compare-row" role="row"><span>Visual charts and savings attribution</span><span>Included</span><span>Included</span></div>
+          <div class="compare-row" role="row"><span>Downloadable report</span><span>Included</span><span>Included</span></div>
+          <div class="compare-row" role="row"><span>45-minute consultant call</span><span>—</span><span>Included</span></div>
+          <div class="compare-row" role="row"><span>Quote comparison support</span><span>—</span><span>Included</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust-signals" aria-labelledby="trust-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Trust signals</div>
+            <h2 id="trust-title">Homeowners who compared before committing.</h2>
+          </div>
+          <p class="intro">Real outcomes from households that used Solar Sensei to validate or reconsider their solar plans.</p>
+        </div>
+        <div class="trust-grid" role="list">
+          <article class="trust-card" role="listitem">
+            <blockquote>
+              "The report showed the 10kW system the installer quoted would've taken 14 years to break even. The 6.6kW + battery config paid back in 6. Saved us $18k upfront."
+            </blockquote>
+            <footer><strong>Sarah M.</strong>, Brisbane — 3-person household</footer>
+          </article>
+          <article class="trust-card" role="listitem">
+            <blockquote>
+              "We were ready to buy a battery. The modelling showed our evening usage was too low to justify it — better to stay grid-tied and revisit in 3 years when prices drop."
+            </blockquote>
+            <footer><strong>James & Priya</strong>, Melbourne — Solar owners since 2019</footer>
+          </article>
+          <article class="trust-card" role="listitem">
+            <blockquote>
+              "Two installers gave us completely different system sizes. Solar Sensei's independent analysis gave us the confidence to negotiate. Got the right system for $4k less."
+            </blockquote>
+            <footer><strong>David L.</strong>, Sydney — First-time solar buyer</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="trust2-title">
+      <div class="wrap trust">
+        <div>
+          <div class="kicker">Trust and independence</div>
+          <h2 id="trust2-title">Built to find the best answer — not price the option you already picked.</h2>
+        </div>
+        <div>
+          <p>Solar Sensei was created from an industry perspective that saw a recurring gap: homeowners were being asked to choose hardware before they had a complete comparison.</p>
+          <p>No installer referrals. Vendor-neutral analysis. Conclusions are tied to the modelled inputs and clearly presented assumptions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ – 6-card grid -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="kicker">FAQ</div>
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq-grid" role="list">
+          <article class="faq-card" role="listitem"><h3>▾ Is this just a solar quote?</h3><p>No. Solar Sensei is a personalised energy analysis across usage, current plan, alternative plans, solar, battery, savings attribution, and long-term outlook.</p></article>
+          <article class="faq-card" role="listitem"><h3>▾ What is the difference between $0 and $90?</h3><p>Both include the same full report. The $90 option adds a 45-minute consultation for interpretation, quote comparison, and next-step guidance.</p></article>
+          <article class="faq-card" role="listitem"><h3>▾ Why do you need interval data?</h3><p>Because timing matters. Time-of-Use data is sufficient for most homes. If you provide higher-resolution interval data (30-min), we use it for finer peak-window and export analysis. Either way, timing affects whether plan switching, solar, battery, or a combination is best.</p></article>
+          <article class="faq-card" role="listitem"><h3>▾ Will my current plan be included?</h3><p>Yes. Your current plan is the baseline so you can see what you pay today and how other options compare.</p></article>
+          <article class="faq-card" role="listitem"><h3>▾ Can I use this if I already have solar?</h3><p>Yes. Solar Sensei can analyse export behaviour, self-consumption, plan fit, and whether a battery retrofit may be worthwhile.</p></article>
+          <article class="faq-card" role="listitem"><h3>▾ Are savings guaranteed?</h3><p>No. Savings are projections based on available data, rates, assumptions, weather, usage behaviour, site conditions, and future energy prices.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8b. Final dark CTA -->
+    <section class="section" style="padding:60px 0 80px; border-top:0;">
+      <div class="wrap">
+        <div class="final-cta">
+          <div>
+            <h2>Find the solar and battery option that actually fits.</h2>
+            <p>Start with the full $0 Solar Sensei Report, or add a 45-minute consultation if you want help reviewing quotes and deciding what to do next.</p>
+          </div>
+          <div class="final-cta-actions">
+            <a class="button primary" href="#pricing" data-action="final-choose">Choose My Report Option</a>
+            <a class="button" href="#included" style="background:#fff; color:var(--text); border-color:#fff;">Review What’s Included</a>
+            <p class="fine" style="opacity:.8; color:#cbd5e1; margin-top:14px; text-align:left; font-size:13px; line-height:1.5;">Projected savings are estimates and depend on tariff eligibility, usage behaviour, site conditions, final system design, and future energy prices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap footer-row">
+      <div class="brand" aria-label="Solar Sensei">SOLAR <span>SENSEI</span></div>
+      <div class="footer-links">
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms and Conditions</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#independence">Affiliate and Independence Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="review-badge" aria-hidden="true">HOME PREVIEW · PROVISIONAL COPY</div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
