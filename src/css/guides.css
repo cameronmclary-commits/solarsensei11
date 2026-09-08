@@ -5,10 +5,15 @@
 }
 
 .guides-hero {
-  background: var(--peach);
-  border-bottom: 1px solid var(--line);
-  padding: 36px 0 40px;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 16% 14%, color-mix(in srgb, var(--teal) 24%, transparent), transparent 29%),
+              radial-gradient(circle at 78% 22%, color-mix(in srgb, var(--purple) 20%, transparent), transparent 28%),
+              linear-gradient(135deg, color-mix(in srgb, var(--ink) 90%, var(--teal)) 0%, var(--ink) 50%, var(--text) 100%);
+  color: #fff;
+  border-bottom: 1px solid #1e293b;
+  padding: 64px 0 72px;
+  text-align: left;
 }
 
 .guides-hero h1 {
@@ -18,16 +23,19 @@
   letter-spacing: -.035em;
   margin: 0 0 20px;
   max-width: 900px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
+  color: #fff;
+  text-align: left;
 }
 
 .guides-hero .lead {
-  font-size: clamp(20px, 2vw, 28px);
-  color: var(--muted);
+  font-size: clamp(18px, 2vw, 24px);
+  color: #cbd5e1;
   max-width: 720px;
-  margin: 0 auto 32px;
+  margin: 0;
   line-height: 1.55;
+  text-align: left;
 }
 
 .guides-list {
