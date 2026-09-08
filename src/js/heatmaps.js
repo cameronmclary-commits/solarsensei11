@@ -1,6 +1,3 @@
-const USAGE_COLORS = ['#23403c', '#3fa08a', '#d9a021', '#f0563a'];
-const COST_COLORS = ['#2b4c7e', '#d9a021', '#f0563a'];
-
 function usageVal(day, hour) {
   const weekend = day >= 5;
   if (hour < 5) return 0;
@@ -11,21 +8,28 @@ function usageVal(day, hour) {
   return 0;
 }
 
-function costVal(day, hour) {
-  if (hour < 7 || hour >= 22) return 0;
-  if (hour < 14 || hour >= 20) return 1;
-  return 2;
+function costTouClass(day, hour) {
+  if (hour >= 16 && hour < 21) return 'heatmap-tou-peak';
+  if (hour >= 7 && hour < 12) return 'heatmap-tou-shoulder';
+  if (hour >= 12 && hour < 16) return 'heatmap-tou-mid';
+  if (hour >= 22 || hour < 7) return 'heatmap-tou-offpeak';
+  return 'heatmap-tou-shoulder';
 }
 
 function renderHeatmaps() {
-  document.querySelectorAll('.heat-grid[data-heat]').forEach((grid) => {
+  document.querySelectorAll('.heatmap[data-heat]').forEach((grid) => {
     if (grid.childElementCount > 0) return;
     const type = grid.dataset.heat;
-    for (let d = 0; d < 8; d++) {
+    for (let d = 0; d < 7; d++) {
       for (let h = 0; h < 24; h++) {
-        const cell = document.createElement('span');
-        const v = type === 'usage' ? usageVal(d, h) : costVal(d, h);
-        cell.style.background = (type === 'usage' ? USAGE_COLORS : COST_COLORS)[v];
+        const cell = document.createElement('div');
+        if (type === 'usage') {
+          const v = usageVal(d, h);
+          const opacity = 0.05 + (v / 3) * 0.5;
+          cell.style.background = `rgba(3, 105, 161, ${opacity})`;
+        } else {
+          cell.className = costTouClass(d, h);
+        }
         grid.appendChild(cell);
       }
     }
