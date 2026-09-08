@@ -188,6 +188,18 @@ section { padding: 88px 0; text-align: center; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
+/* Pastel feature cards — full fills, dark text for contrast */
+.card-pastel-1 { background: #d8f3e8; border-color: transparent; }
+.card-pastel-2 { background: #fce3d3; border-color: transparent; }
+.card-pastel-3 { background: #e6e2fa; border-color: transparent; }
+.card-pastel-1 h3, .card-pastel-2 h3, .card-pastel-3 h3 { color: #101418; }
+.card-pastel-1 p, .card-pastel-2 p, .card-pastel-3 p { color: #4a5560; }
+.section-dark .card-pastel-1 h3, .section-dark .card-pastel-2 h3, .section-dark .card-pastel-3 h3 { color: #101418; }
+.section-dark .card-pastel-1 p, .section-dark .card-pastel-2 p, .section-dark .card-pastel-3 p { color: #4a5560; }
+.section-dark .card-pastel-1:hover { background: #c9eee0; }
+.section-dark .card-pastel-2:hover { background: #f9d9c4; }
+.section-dark .card-pastel-3:hover { background: #dbd6f7; }
+
 /* Decision layer / What you'll learn / Audience — all use .grid-3 + .card */
 .decision-layer { background: var(--soft); border-top: 1px solid var(--line); }
 .what-youll-learn { }
