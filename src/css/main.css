@@ -159,25 +159,6 @@ section { padding: 88px 0; text-align: center; }
 .section-head h2 { font-family: Georgia, serif; font-size: clamp(36px, 4.8vw, 62px); line-height: 1.02; letter-spacing: -.065em; margin: 10px 0 16px; }
 .section-head p { font-size: 20px; color: var(--muted); margin: 0 auto; max-width: 720px; line-height: 1.6; }
 
-/* Section head with a short intro line — split into two columns (title
-   left, intro right) so the row fills the section width instead of
-   leaving a large empty gap beside a short line of copy. No content is
-   added; the existing eyebrow+heading and paragraph just sit side by side. */
-.section-head.has-copy {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  column-gap: 56px;
-  align-items: end;
-  max-width: 100%;
-}
-.section-head.has-copy .head-copy h2 { margin: 10px 0 0; }
-.section-head.has-copy p { margin: 0 0 6px; max-width: 420px; }
-
-@media (max-width: 900px) {
-  .section-head.has-copy { display: block; }
-  .section-head.has-copy p { margin-top: 16px; max-width: 620px; }
-}
-
 /* Cards */
 .card { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 26px; box-shadow: var(--card-shadow); transition: transform var(--transition), box-shadow var(--transition); }
 .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
