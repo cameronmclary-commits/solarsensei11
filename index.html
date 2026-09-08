@@ -59,86 +59,28 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What data do I need to upload?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Time-of-Use data is most common and sufficient for modelling. If you can provide higher-resolution interval data (30-minute readings) we will use it for even finer analysis. Export as CSV from your retailer portal — 12 months recommended where available."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between $0 and $90?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Both include the same full Solar Sensei Report. The $90 option adds a 45-minute consultation for interpretation, quote comparison and next-step guidance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does the analysis take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Reports are typically generated within 24 hours of data upload. Complex scenarios with multiple tariff comparisons or battery brand modelling may take up to 48 hours."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does this require a solar quote first?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Solar Sensei works with or without existing quotes. If you have quotes, we'll include them in the comparison to see how they stack up against other configurations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is the report tied to specific products or installers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Solar Sensei is vendor-neutral. We model hardware-agnostic configurations and do not receive referral fees from installers or manufacturers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are savings guaranteed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Savings are projections based on available data, rates, assumptions, weather, usage behaviour, site conditions and future energy prices."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
   <header class="topbar" role="banner">
     <div class="wrap nav">
       <a href="#home" class="brand" aria-label="Solar Sensei home"><span>SOLAR SENSEI</span></a>
       <nav class="navlinks" aria-label="Main navigation">
-        <a href="#problem">Why it matters</a>
-        <a href="#what">What we do</a>
-        <a href="#visuals">Visuals</a>
-        <a href="guides.html">Guides</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="faq.html">FAQ</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="guides.html">Articles/Guides</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <button class="theme theme-toggle" id="theme" type="button" aria-label="Switch to dark theme">Dark mode</button>
       <a class="btn btn-dark" href="#pricing" data-action="generate-report">Start report</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileLinks">☰</button>
     </div>
     <nav class="mobile-links" id="mobileLinks" aria-label="Mobile navigation">
-      <a href="#problem">Why it matters</a>
-      <a href="#what">What we do</a>
-      <a href="#visuals">Visuals</a>
-      <a href="guides.html">Guides</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
+      <a href="faq.html">FAQ</a>
+      <a href="how-it-works.html">How it Works</a>
+      <a href="guides.html">Articles/Guides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
       <button class="theme theme-toggle" id="theme-mobile" type="button" aria-label="Switch to dark theme">Dark mode</button>
       <a class="btn btn-primary" href="#pricing" data-action="generate-report">Start report</a>
     </nav>
@@ -274,20 +216,6 @@
       </div>
     </section>
 
-    <section id="faq" class="section-dark">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">FAQ</div><h2>Common questions</h2></div>
-        <div class="faq-grid">
-          <details open><summary>Is this just a solar quote?</summary><p>No. Solar Sensei is a personalised report covering usage, current plan, alternative plans, solar, battery, savings attribution, and long-term outlook.</p></details>
-          <details><summary>What is the difference between $0 and $90?</summary><p>Both include the full report. The $90 option adds a 45-minute consultation and quote comparison support.</p></details>
-          <details><summary>Why do you need interval data?</summary><p>Because timing matters. Usage timing affects whether plan switching, solar, battery storage or a combined solution is best.</p></details>
-          <details><summary>Will my current plan be included?</summary><p>Yes. Your current plan is the baseline so you can see what you pay today and how other options compare.</p></details>
-          <details><summary>Can I use this if I already have solar?</summary><p>Yes. Solar Sensei can analyse export behaviour, self-consumption, plan fit, and whether a battery retrofit may be worthwhile.</p></details>
-          <details><summary>Are savings guaranteed?</summary><p>No. Savings are projections based on data, rates and assumptions. Actual outcomes can vary.</p></details>
-        </div>
-      </div>
-    </section>
-
     <section class="cta-blobs" id="start">
       <div class="wrap">
         <div class="blobs-cta">
@@ -305,7 +233,7 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap"><div class="brand"><span>SOLAR SENSEI</span></div><div class="foot-links"><a href="#visuals">Visuals</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
+    <div class="wrap"><div class="brand"><span>SOLAR SENSEI</span></div><div class="foot-links"><a href="faq.html">FAQ</a><a href="how-it-works.html">How it Works</a><a href="guides.html">Articles/Guides</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
   </footer>
 
   <div class="review-badge" aria-hidden="true">HOME PREVIEW · PROVISIONAL COPY</div>
