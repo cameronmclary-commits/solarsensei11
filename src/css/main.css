@@ -152,74 +152,25 @@ img { max-width: 100%; height: auto; display: block; }
 .float span { font-size: 12px; color: var(--muted); }
 
 /* Sections */
-section { padding: 88px 0; }
+section { padding: 88px 0; text-align: center; }
 
-/* Dark section — hero gradient treatment */
-.section-dark {
-  position: relative; overflow: hidden;
-  background: radial-gradient(circle at 16% 14%, color-mix(in srgb, var(--teal) 22%, transparent), transparent 29%),
-              radial-gradient(circle at 78% 22%, color-mix(in srgb, var(--purple) 18%, transparent), transparent 28%),
-              linear-gradient(135deg, color-mix(in srgb, var(--ink) 92%, var(--teal)) 0%, var(--ink) 50%, color-mix(in srgb, var(--ink) 95%, var(--purple)) 100%);
-  color: #fff;
-}
-.section-dark::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, #000, transparent 78%);
-  pointer-events: none;
-}
-.section-dark > .wrap { position: relative; }
-.section-dark .section-head h2,
-.section-dark h2,
-.section-dark h3 { color: #fff; }
-.section-dark .section-head p,
-.section-dark p { color: #cbd5e1; }
-.section-dark .eyebrow { color: var(--teal2); }
-.section-dark .card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 16px 48px rgba(0,0,0,.2);
-}
-.section-dark .card h3 { color: #fff; }
-.section-dark .card p { color: #cbd5e1; }
-.section-dark .card:hover { background: rgba(255,255,255,.09); box-shadow: 0 24px 64px rgba(0,0,0,.3); }
-.section-dark .icon { background: linear-gradient(135deg, var(--teal2), #3b82f6); }
-.section-dark .num { background: var(--teal2); color: var(--ink); }
-.section-dark .wisdom { border-left-color: var(--teal2); background: rgba(255,255,255,.06); }
-.section-dark .wisdom p { color: #fff; }
-.section-dark .step { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
-.section-dark .step h3 { color: #fff; }
-.section-dark .step p { color: #cbd5e1; }
-.section-dark .rank-panel { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
-.section-dark .rank-col + div { border-left-color: rgba(255,255,255,.12); }
-.section-dark .kicker { color: var(--teal2); }
-.section-dark .arrow-list li { color: #e2e8f0; }
-.section-dark .faq-grid details { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
-.section-dark .faq-grid details p { color: #cbd5e1; }
-.section-dark .trust-card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
-.section-dark .trust-card blockquote { color: #e2e8f0; }
-.section-dark .trust-card footer { color: #94a3b8; }
-.section-dark .trust-card footer strong { color: #fff; }
-.section-dark .stat { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
-.section-dark .stat span { color: #cbd5e1; }
-.section-dark .visual { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
-
-/* Light section — contrast for pricing */
-.section-light { background: var(--bg); color: var(--text); }
-.section-light .section-head h2 { color: var(--text); }
-.section-light .section-head p { color: var(--muted); }
-.section-light .eyebrow { color: var(--teal); }
-.section-dark .visual p { color: #cbd5e1; }
+/* Section head — centered titles */
 .section-head { max-width: 900px; margin: 0 auto 40px; text-align: center; }
 .section-head h2 { font-family: Georgia, serif; font-size: clamp(36px, 4.8vw, 62px); line-height: 1.02; letter-spacing: -.065em; margin: 10px 0 16px; }
 .section-head p { font-size: 20px; color: var(--muted); margin: 0 auto; max-width: 720px; line-height: 1.6; }
-.section-dark .section-head p { color: #cbd5e1; }
-.eyebrow { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 950; color: var(--teal); display: inline-block; }
-.section-dark .eyebrow { color: var(--teal2); }
 
-/* Card system — unified across all sections */
+/* Cards */
+.card { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 26px; box-shadow: var(--card-shadow); transition: transform var(--transition), box-shadow var(--transition); }
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.card h3 { font-size: 24px; letter-spacing: -.035em; margin: 0 0 10px; }
+.card p { color: var(--muted); margin: 0; line-height: 1.6; font-size: 17px; }
+
+/* Eyebrow kicker */
+.eyebrow { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 950; color: var(--teal); display: inline-block; }
+
+/* Grid utilities */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .card {
   background: var(--surface);
   border: 1px solid var(--card-line);
@@ -231,7 +182,6 @@ section { padding: 88px 0; }
 .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .card h3 { font-size: 24px; letter-spacing: -.035em; margin: 0 0 10px; }
 .card p { color: var(--muted); margin: 0; line-height: 1.6; font-size: 17px; }
-.section-dark .card p { color: #cbd5e1; }
 .icon { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 18px; font-weight: 950; color: #fff; background: linear-gradient(135deg, var(--teal), #3b82f6); }
 
 /* Grid utilities */
@@ -337,10 +287,8 @@ section { padding: 88px 0; }
 
 /* Trust independence */
 .trust { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; align-items: center; }
-.section-dark .trust h2,
-.section-dark .signature-grid h2 { color: #fff; font-family: Georgia, serif; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.05; letter-spacing: -.05em; margin: 0 0 18px; }
-.section-dark .trust p,
-.section-dark .signature-grid p { font-size: 20px; color: #cbd5e1; margin: 0; line-height: 1.6; }
+.trust h2 { color: var(--text); font-family: Georgia, serif; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.05; letter-spacing: -.05em; margin: 0 0 18px; }
+.trust p { font-size: 20px; color: var(--muted); margin: 0; line-height: 1.6; }
 
 /* CTA blobs */
 .cta-blobs {
@@ -366,7 +314,6 @@ section { padding: 88px 0; }
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .faq-grid details { background: var(--surface); border: 1px solid var(--card-line); border-radius: 22px; padding: 19px; }
 .faq-grid summary { font-weight: 950; font-size: 18px; color: var(--text); cursor: pointer; list-style: none; position: relative; padding-right: 36px; }
-.section-dark .faq-grid summary { color: #fff; }
 .faq-grid summary::-webkit-details-marker { display: none; }
 .faq-grid summary::after { content: "+"; position: absolute; right: 0; top: 0; font-size: 26px; line-height: 1; color: var(--teal); transition: transform var(--transition); width: 32px; height: 32px; display: grid; place-items: center; }
 .faq-grid details[open] summary::after { transform: rotate(45deg); }
