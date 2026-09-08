@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Time-of-use tariffs explained — how peak, shoulder and off-peak pricing shapes solar returns and battery value for Australian homeowners.">
+  <meta name="theme-color" content="#087b6b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#20d0ad" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Your tariff can make or break your solar return — Solar Sensei">
+  <meta property="og:description" content="How time-of-use tariffs shape solar value, battery economics and plan-change potential.">
+  <meta property="og:image" content="https://solarsensei.com/og-image.jpg">
+  <meta property="og:url" content="https://solarsensei.com/guide-tariffs.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your tariff can make or break your solar return — Solar Sensei">
+  <meta name="twitter:description" content="How time-of-use tariffs shape solar value, battery economics and plan-change potential.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+
+  <link rel="stylesheet" href="src/css/main.css?v=4">
+  <link rel="stylesheet" href="src/css/guide.css?v=4">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+
+  <title>Your tariff can make or break your solar return — Solar Sensei</title>
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="wrap nav">
+      <a href="index.html" class="brand" aria-label="Solar Sensei home"><span>SOLAR SENSEI</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="faq.html">FAQ</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="guides.html">Articles/Guides</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-dark" href="how-it-works.html#pricing" data-action="generate-report">Start report</a>
+        <button class="theme theme-toggle" id="theme" type="button" aria-label="Switch to dark theme">Dark mode</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileLinks">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-links" id="mobileLinks" aria-label="Mobile navigation">
+      <a href="faq.html">FAQ</a>
+      <a href="how-it-works.html">How it Works</a>
+      <a href="guides.html">Articles/Guides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme theme-toggle" id="theme-mobile" type="button" aria-label="Switch to dark theme">Dark mode</button>
+      <a class="btn btn-primary" href="how-it-works.html#pricing" data-action="generate-report">Start report</a>
+    </nav>
+  </header>
+
+  <main class="guide-page">
+    <article>
+      <header class="guide-hero">
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="guides.html">Guides</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Time-of-use tariffs</span>
+          </nav>
+          <div class="guide-badge" style="background:#eef6d8; color:#4d7c0f; border-color:#d9e8b8;">✦ GUIDE · TARIFFS</div>
+          <h1>Your tariff can make or break your <span style="color:var(--orange);">solar return</span></h1>
+          <p class="guide-lead">Most homeowners focus on panel efficiency, inverter brands and install costs. But one of the biggest factors in your solar return is something you may never have considered: your electricity tariff's clock.</p>
+          <div class="guide-meta">
+            <span class="meta-pill">🗓️ Updated 22/08/26</span>
+            <span class="meta-pill">📖 6 min read</span>
+            <span class="meta-pill">🇦🇺 Australian tariffs</span>
+            <span class="meta-pill">✅ Example rates — windows vary by retailer</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="guide-layout wrap">
+        <aside class="guide-toc" aria-label="Table of contents">
+          <div class="toc-label">ON THIS PAGE</div>
+          <nav>
+            <a href="#what-is-tou">What is a TOU tariff?</a>
+            <a href="#tou-solar-value">How TOU affects solar value</a>
+            <a href="#tou-battery-value">How TOU affects battery value</a>
+            <a href="#stack-up">When batteries stack up</a>
+            <a href="#change-plans">Should you change plans?</a>
+            <a href="#takeaways">Key takeaways</a>
+            <a href="#guide-faq">FAQ</a>
+          </nav>
+          <div class="toc-box toc-box-lime">
+            <div class="toc-box-label">FREE ANALYSIS</div>
+            <p>See how your tariff shapes the result — before quotes.</p>
+            <a class="btn-lime" href="how-it-works.html#pricing">Analyse my tariff</a>
+          </div>
+          <div class="toc-box">
+            <div class="toc-box-label">MORE GUIDES</div>
+            <nav class="toc-box-links">
+              <a href="#">Before you get solar quotes</a>
+              <a href="guide-bill.html">Read your electricity bill</a>
+              <a href="#">Battery: when it makes sense</a>
+              <a href="guides.html">Browse all guides →</a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="guide-content">
+          <section id="tou-intro">
+            <p>Time-of-use (TOU) tariffs charge different rates at different times of day. This can significantly affect the value of your solar generation, the attractiveness of battery storage, and whether changing plans may be more valuable than installing equipment.</p>
+          </section>
+
+          <section id="what-is-tou">
+            <h2>What is a time-of-use tariff?</h2>
+            <div class="tou-timeline" role="img" aria-label="Illustrative weekday time-of-use windows: off-peak overnight, shoulder daytime, peak 4 to 9pm">
+              <div class="tou-segs">
+                <span style="flex:25; background:#3b82f6;">Off-peak</span>
+                <span style="flex:35; background:#d97706;">Shoulder</span>
+                <span style="flex:22; background:#e23c2e;"><i class="tou-full">Peak 4–9pm</i><i class="tou-short">Peak</i></span>
+                <span style="flex:6; background:#d97706;" aria-hidden="true"></span>
+                <span style="flex:12; background:#3b82f6;">Off</span>
+              </div>
+              <div class="tou-times" aria-hidden="true">
+                <span>12am</span><span>3am</span><span>6am</span><span>9am</span><span>12pm</span><span>3pm</span><span>6pm</span><span>9pm</span><span>12am</span>
+              </div>
+            </div>
+            <p class="bill-caption">Example weekday windows. Exact times and rates vary by retailer, state and specific tariff.</p>
+
+            <div class="format-cards">
+              <div class="format-card">
+                <div class="format-bar" style="background:#e23c2e;"></div>
+                <div class="format-kicker">PEAK PERIOD</div>
+                <h3>Highest price</h3>
+                <p><strong>When:</strong> late afternoon–evening (e.g. 4pm–9pm weekdays)</p>
+                <p><strong>Rate:</strong> ~30–45¢ per kWh</p>
+                <p><strong>Why:</strong> highest demand on the grid</p>
+              </div>
+              <div class="format-card">
+                <div class="format-bar" style="background:#d97706;"></div>
+                <div class="format-kicker">SHOULDER PERIOD</div>
+                <h3>Mid-range price</h3>
+                <p><strong>When:</strong> daytime &amp; early evening outside peak</p>
+                <p><strong>Rate:</strong> ~20–30¢ per kWh</p>
+                <p><strong>Why:</strong> moderate demand</p>
+              </div>
+              <div class="format-card">
+                <div class="format-bar" style="background:#3b82f6;"></div>
+                <div class="format-kicker">OFF-PEAK PERIOD</div>
+                <h3>Lowest price</h3>
+                <p><strong>When:</strong> overnight, sometimes midday (e.g. 10pm–7am)</p>
+                <p><strong>Rate:</strong> ~10–15¢ per kWh</p>
+                <p><strong>Why:</strong> lowest demand on the grid</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="tou-solar-value">
+            <h2>How TOU tariffs affect solar value</h2>
+            <h3>The timing mismatch</h3>
+            <p>Solar generates through the middle of the day — often during shoulder or off-peak pricing — while many households consume most energy in the morning and, especially, the evening peak:</p>
+            <div class="pattern-box">
+              <div class="pattern-row">
+                <span class="pattern-label">Solar generation</span>
+                <div class="pattern-cells" aria-hidden="true">
+                  <span style="background:#e3efe9;"></span><span style="background:#e3efe9;"></span><span style="background:#e3efe9;"></span><span style="background:#a8d8c6;"></span><span style="background:#2fbf9b;"></span><span style="background:#b8e62e;"></span><span style="background:#b8e62e;"></span><span style="background:#2fbf9b;"></span><span style="background:#a8d8c6;"></span><span style="background:#e3efe9;"></span><span style="background:#e3efe9;"></span><span style="background:#e3efe9;"></span>
+                </div>
+              </div>
+              <div class="pattern-row">
+                <span class="pattern-label">Household use</span>
+                <div class="pattern-cells" aria-hidden="true">
+                  <span style="background:#f3e2d8;"></span><span style="background:#ef6a4a;"></span><span style="background:#f2b234;"></span><span style="background:#f3e2d8;"></span><span style="background:#e3efe9;"></span><span style="background:#e3efe9;"></span><span style="background:#f3e2d8;"></span><span style="background:#f2b234;"></span><span style="background:#ef6a4a;"></span><span style="background:#ef6a4a;"></span><span style="background:#f2b234;"></span><span style="background:#f3e2d8;"></span>
+                </div>
+              </div>
+              <p class="pattern-caption">Illustrative 24-hour pattern (2-hour blocks): generation peaks midday while demand peaks morning and evening — exactly when peak pricing often applies.</p>
+            </div>
+            <p><strong>The value of self-consumption:</strong> under TOU pricing, every kWh of solar you consume directly saves you the import rate for that period rather than earning the feed-in rate:</p>
+            <div class="math-row">
+              <div class="math-box"><strong>35¢</strong><span>Peak import rate saved</span></div>
+              <span class="math-op" aria-hidden="true">−</span>
+              <div class="math-box"><strong>8¢</strong><span>Feed-in tariff earned</span></div>
+              <span class="math-op" aria-hidden="true">=</span>
+              <div class="math-box math-highlight"><strong>27¢</strong><span>Extra value per kWh self-consumed</span></div>
+            </div>
+            <p>This makes maximising self-consumption more valuable under TOU tariffs than under flat rates. Example figures only.</p>
+          </section>
+
+          <section id="tou-battery-value">
+            <h2>How TOU tariffs affect battery value</h2>
+            <div class="steps-grid cols-3">
+              <div class="step-card">
+                <span class="step-num">1</span>
+                <h3>Time-shift solar</h3>
+                <p>Store excess daytime solar and discharge in the evening peak, avoiding expensive grid imports.</p>
+              </div>
+              <div class="step-card">
+                <span class="step-num">2</span>
+                <h3>Charge off-peak</h3>
+                <p>Where your plan allows, charge from the grid overnight and discharge during peak — capturing the rate difference.</p>
+              </div>
+              <div class="step-card">
+                <span class="step-num">3</span>
+                <h3>Manage load</h3>
+                <p>Cover high-cost periods from storage and potentially reduce demand charges on demand tariffs.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="stack-up">
+            <h2>So — do batteries stack up on TOU?</h2>
+            <div class="verdict-grid">
+              <div class="verdict-card">
+                <h3>More attractive when…</h3>
+                <ul class="check-list">
+                  <li>Peak rates are significantly higher than off-peak (e.g. 35¢ vs 12¢)</li>
+                  <li>Feed-in tariffs are low (5–10¢), making self-consumption valuable</li>
+                  <li>Evening consumption is high, creating peak-import displacement opportunities</li>
+                  <li>Solar generation exceeds daytime use, leaving surplus to store</li>
+                </ul>
+              </div>
+              <div class="verdict-card">
+                <h3>Less attractive when…</h3>
+                <ul class="cross-list">
+                  <li>Rate differences are small (e.g. 28¢ vs 22¢) — limited arbitrage</li>
+                  <li>Feed-in tariffs are generous (15–20¢) — exporting competes with storing</li>
+                  <li>Evening consumption is low — little expensive demand to displace</li>
+                  <li>You're on a flat-rate tariff — no time-based pricing to exploit</li>
+                </ul>
+              </div>
+            </div>
+            <p>For the full battery decision framework, see <a href="#">when battery storage makes financial sense</a>.</p>
+          </section>
+
+          <section id="change-plans">
+            <h2>Should you change your electricity plan?</h2>
+            <p>Many homeowners remain on default or legacy tariffs without realising better-fitting options exist. Before installing solar or batteries, consider:</p>
+            <ul class="check-list">
+              <li><strong>Current structure</strong> — are you on flat-rate or time-of-use?</li>
+              <li><strong>Alternatives</strong> — do other plans price your usage pattern better?</li>
+              <li><strong>Feed-in comparisons</strong> — do some retailers pay more for exports?</li>
+              <li><strong>Peak alignment</strong> — do peak windows match your high-consumption hours?</li>
+            </ul>
+            <p>Changing plans may sometimes deliver more immediate savings than installing additional equipment — which is why Solar Sensei shows the two effects separately.</p>
+            <div class="cta-mint">
+              <h3>See what your tariff is doing to your solar return.</h3>
+              <p>Solar Sensei analyses your actual tariff structure and models system and plan-change benefits separately, so nothing is blended into one opaque number.</p>
+              <a class="btn-lime" href="how-it-works.html#pricing">Analyse my tariff — free</a>
+            </div>
+          </section>
+
+          <section id="takeaways" class="takeaways-box">
+            <div class="takeaways-label">KEY TAKEAWAYS</div>
+            <ul class="takeaways-list">
+              <li>Time-of-use tariffs charge different rates at different times of day</li>
+              <li>TOU tariffs can significantly affect solar self-consumption value</li>
+              <li>Batteries tend to perform better under TOU tariffs with large rate differences</li>
+              <li>Low feed-in tariffs and high peak import rates increase battery attractiveness</li>
+              <li>Changing electricity plans may sometimes deliver more value than installing equipment</li>
+              <li>Understanding your tariff is essential before making solar or battery decisions</li>
+            </ul>
+          </section>
+
+          <section id="guide-faq" class="guide-faq">
+            <h2>Frequently asked questions</h2>
+            <details>
+              <summary>What are typical peak, shoulder and off-peak times?</summary>
+              <p>Peak is typically late afternoon to evening (e.g. 4pm–9pm weekdays), shoulder covers daytime and early evening outside peak, and off-peak is usually overnight (e.g. 10pm–7am). Exact windows vary by retailer, state and specific tariff.</p>
+            </details>
+            <details>
+              <summary>Is solar still worth it on a time-of-use tariff?</summary>
+              <p>Generally yes, but timing matters. Solar generation often lands in shoulder or off-peak pricing periods while household consumption peaks in expensive evening periods. This makes self-consumption timing, and potentially battery storage, more important.</p>
+            </details>
+            <details>
+              <summary>Do batteries work with time-of-use tariffs?</summary>
+              <p>They can work well: time-shift solar into the evening peak, charge off-peak where your plan allows, and manage load to cover high-cost periods. They are most attractive when peak rates far exceed off-peak rates and evening consumption is high.</p>
+            </details>
+            <details>
+              <summary>Should I change plans before installing solar?</summary>
+              <p>It is worth comparing first. Check your current structure, alternatives that price your usage pattern better, feed-in comparisons and peak alignment — a plan change can sometimes deliver more immediate savings than new equipment.</p>
+            </details>
+            <details>
+              <summary>Does time-of-use pricing change feed-in tariff value?</summary>
+              <p>It changes the trade-off: every kWh you self-consume saves the import rate for that period rather than earning the feed-in rate, so low feed-in tariffs combined with high peak import rates make self-consumption — and storage — more valuable.</p>
+            </details>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <section class="guide-bottom-cta">
+      <div class="wrap">
+        <div class="bottom-cta-card">
+          <div class="pill" style="display:inline-block; margin-bottom:24px; border-color:color-mix(in srgb, var(--teal) 30%, var(--line)); color:var(--teal); background:color-mix(in srgb, var(--teal) 8%, transparent);">FREE TARIFF ANALYSIS</div>
+          <h2>Modelled against your actual tariff — not averages.</h2>
+          <p>Upload your bill and see how your peak, shoulder and off-peak rates shape solar value, battery economics and plan-change potential.</p>
+          <a class="button primary" href="how-it-works.html#pricing" style="display:inline-block; border-radius:999px; padding:16px 28px; font-size:16px;">Analyse your tariff and usage — free →</a>
+          <div class="bottom-cta-pills">
+            <span>🔓 No sign-up required</span>
+            <span>📍 Australia-wide</span>
+            <span>🧾 Indicative modelling — not a quote</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="keep-reading">
+      <div class="wrap">
+        <h2>Keep reading</h2>
+        <div class="keep-grid">
+          <a href="#" class="keep-card">
+            <div class="keep-tag">GUIDE · QUOTES</div>
+            <h3>Before you get solar quotes</h3>
+            <p>Turn tariff knowledge into a smarter quoting brief.</p>
+          </a>
+          <a href="guide-bill.html" class="keep-card">
+            <div class="keep-tag">GUIDE · YOUR BILL</div>
+            <h3>How to read your electricity bill</h3>
+            <p>Find your tariff type, rates and feed-in details in minutes.</p>
+          </a>
+          <a href="#" class="keep-card">
+            <div class="keep-tag">GUIDE · BATTERY</div>
+            <h3>When batteries make financial sense</h3>
+            <p>The complete green-light / caution-sign framework.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><div class="brand"><span>SOLAR SENSEI</span></div><div class="foot-links"><a href="faq.html">FAQ</a><a href="how-it-works.html">How it Works</a><a href="guides.html">Articles/Guides</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
+  </footer>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
