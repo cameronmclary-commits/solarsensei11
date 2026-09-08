@@ -196,6 +196,27 @@ section { padding: 88px 0; text-align: center; }
 #learn .card h3, #decision .card h3 { font-family: Georgia, serif; font-size: 23px; line-height: 1.3; letter-spacing: 0; margin: 0 0 12px; }
 #learn .card p, #decision .card p { max-width: 300px; margin: 0 auto; line-height: 1.65; }
 
+/* Dark alternating section — hero gradient theme */
+.section-dark {
+  position: relative; overflow: hidden;
+  background: radial-gradient(circle at 16% 14%, color-mix(in srgb, var(--teal) 22%, transparent), transparent 29%),
+              radial-gradient(circle at 78% 22%, color-mix(in srgb, var(--purple) 18%, transparent), transparent 28%),
+              linear-gradient(135deg, color-mix(in srgb, var(--ink) 92%, var(--teal)) 0%, var(--ink) 50%, color-mix(in srgb, var(--ink) 95%, var(--purple)) 100%);
+  color: #fff;
+}
+.section-dark::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, #000, transparent 78%);
+  pointer-events: none;
+}
+.section-dark > .wrap { position: relative; }
+.section-dark .section-head h2, .section-dark h2 { color: #fff; }
+.section-dark .section-head p { color: #cbd5e1; }
+.section-dark .eyebrow { color: var(--teal2); }
+
 /* Pastel feature cards — full fills, dark text for contrast */
 .card.pastel-1, .step.pastel-1, .trust-card.pastel-1 { background: #eef9ee; border-color: transparent; }
 .card.pastel-2, .step.pastel-2, .trust-card.pastel-2 { background: #fef4e9; border-color: transparent; }
