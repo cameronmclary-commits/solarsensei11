@@ -8,14 +8,14 @@
 .guide-hero {
   background: var(--soft);
   border-bottom: 1px solid var(--line);
-  padding: 48px 0 56px;
+  padding: 36px 0 44px;
   text-align: center;
 }
 
 .breadcrumb {
   font-size: 14px;
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +46,7 @@
   border: 1px solid color-mix(in srgb, var(--teal) 30%, var(--line));
   padding: 7px 16px;
   border-radius: 999px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .guide-hero h1 {
@@ -62,7 +62,7 @@
   font-size: clamp(18px, 1.8vw, 24px);
   color: var(--muted);
   max-width: 780px;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
   line-height: 1.55;
 }
 
@@ -89,8 +89,8 @@
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 64px;
-  padding-top: 48px;
-  padding-bottom: 80px;
+  padding-top: 32px;
+  padding-bottom: 64px;
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
@@ -150,6 +150,18 @@
   margin-bottom: 0;
 }
 
+/* Neutralise the global section padding inside the article body
+   (feature boxes keep their own padding) */
+#bill-matters,
+#what-to-look,
+#bill-formats,
+#blind-spots,
+#how-to-use,
+#before-quotes,
+#guide-faq {
+  padding: 0;
+}
+
 /* Center headings for sections with centered boxes */
 .guide-content > section > h2 {
   text-align: center;
@@ -157,7 +169,7 @@
   font-size: clamp(28px, 3vw, 42px);
   line-height: 1.15;
   letter-spacing: -.03em;
-  margin: 64px 0 24px;
+  margin: 48px 0 20px;
   color: var(--text);
 }
 
@@ -305,7 +317,7 @@
 
 /* Numbered sections - centered heading, left-aligned content */
 .numbered-section {
-  margin: 56px auto;
+  margin: 40px auto;
   max-width: 720px;
   text-align: left;
 }
@@ -561,8 +573,8 @@
   background: color-mix(in srgb, var(--teal) 8%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--teal) 25%, var(--line));
   border-radius: 18px;
-  padding: 40px;
-  margin: 48px auto 0;
+  padding: 36px;
+  margin: 36px auto 0;
   max-width: 720px;
   text-align: center;
 }
@@ -583,8 +595,8 @@
 .takeaways-box {
   background: var(--soft);
   border-radius: 18px;
-  padding: 36px;
-  margin: 48px auto 0;
+  padding: 32px;
+  margin: 36px auto 0;
   max-width: 720px;
   text-align: center;
 }
@@ -627,7 +639,7 @@
 
 /* Guide FAQ - centered */
 .guide-faq {
-  margin: 48px auto 0;
+  margin: 36px auto 0;
   max-width: 720px;
   text-align: center;
 }
@@ -711,7 +723,7 @@
 
 /* Bottom CTA */
 .guide-bottom-cta {
-  padding: 80px 0;
+  padding: 64px 0;
   background: var(--peach);
   border-top: 1px solid var(--line);
 }
@@ -760,7 +772,7 @@
 
 /* Keep reading */
 .keep-reading {
-  padding: 80px 0;
+  padding: 64px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -878,7 +890,7 @@
 
   .guide-content > section > h2 {
     font-size: clamp(26px, 4vw, 36px);
-    margin: 48px 0 20px;
+    margin: 40px 0 18px;
   }
 }
 
@@ -955,7 +967,7 @@
 
   .guide-content > section > h2 {
     font-size: 24px;
-    margin: 40px 0 16px;
+    margin: 32px 0 14px;
   }
 }
 

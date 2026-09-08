@@ -7,7 +7,7 @@
 .guides-hero {
   background: var(--peach);
   border-bottom: 1px solid var(--line);
-  padding: 80px 0 96px;
+  padding: 64px 0 72px;
   text-align: center;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .guides-list {
-  padding: 80px 0;
+  padding: 64px 0;
 }
 
 .guides-grid {
@@ -134,7 +134,7 @@
 
 /* Guides CTA */
 .guides-cta {
-  padding: 80px 0;
+  padding: 64px 0;
   background: var(--soft);
   border-top: 1px solid var(--line);
 }
@@ -186,7 +186,7 @@
 
 @media (max-width: 680px) {
   .guides-hero {
-    padding: 56px 0 64px;
+    padding: 48px 0 56px;
   }
 
   .guides-hero h1 {
@@ -194,7 +194,7 @@
   }
 
   .guides-list {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
   .guides-grid {
@@ -202,7 +202,7 @@
   }
 
   .guides-cta {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 }
 
