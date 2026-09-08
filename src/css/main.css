@@ -73,7 +73,10 @@ img { max-width: 100%; height: auto; display: block; }
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
-.nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav { min-height: 78px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
+.nav .brand { justify-self: start; }
+.navlinks, .nav .links { justify-self: center; }
+.nav-actions, .nav .actions { justify-self: end; display: flex; align-items: center; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 12px; font-size: 25px; font-weight: 950; letter-spacing: -.055em; }
 .brand span { color: var(--teal); }
 .navlinks { display: flex; gap: 24px; font-size: 14px; font-weight: 800; color: var(--muted); }
@@ -189,16 +192,26 @@ section { padding: 88px 0; text-align: center; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
 /* Pastel feature cards — full fills, dark text for contrast */
-.card-pastel-1 { background: #d8f3e8; border-color: transparent; }
-.card-pastel-2 { background: #fce3d3; border-color: transparent; }
-.card-pastel-3 { background: #e6e2fa; border-color: transparent; }
-.card-pastel-1 h3, .card-pastel-2 h3, .card-pastel-3 h3 { color: #101418; }
-.card-pastel-1 p, .card-pastel-2 p, .card-pastel-3 p { color: #4a5560; }
-.section-dark .card-pastel-1 h3, .section-dark .card-pastel-2 h3, .section-dark .card-pastel-3 h3 { color: #101418; }
-.section-dark .card-pastel-1 p, .section-dark .card-pastel-2 p, .section-dark .card-pastel-3 p { color: #4a5560; }
-.section-dark .card-pastel-1:hover { background: #c9eee0; }
-.section-dark .card-pastel-2:hover { background: #f9d9c4; }
-.section-dark .card-pastel-3:hover { background: #dbd6f7; }
+.card.pastel-1, .step.pastel-1, .trust-card.pastel-1 { background: #e7f7ee; border-color: transparent; }
+.card.pastel-2, .step.pastel-2, .trust-card.pastel-2 { background: #feefe0; border-color: transparent; }
+.card.pastel-3, .step.pastel-3, .trust-card.pastel-3 { background: #eeecfd; border-color: transparent; }
+.card.pastel-4, .step.pastel-4, .trust-card.pastel-4 { background: #e3f1fe; border-color: transparent; }
+.card.pastel-5, .step.pastel-5, .trust-card.pastel-5 { background: #faf3da; border-color: transparent; }
+.pastel-1 h3, .pastel-2 h3, .pastel-3 h3, .pastel-4 h3, .pastel-5 h3,
+.pastel-1 blockquote, .pastel-2 blockquote, .pastel-3 blockquote, .pastel-4 blockquote, .pastel-5 blockquote { color: #101418; }
+.pastel-1 p, .pastel-2 p, .pastel-3 p, .pastel-4 p, .pastel-5 p,
+.pastel-1 footer, .pastel-2 footer, .pastel-3 footer, .pastel-4 footer, .pastel-5 footer { color: #4a5560; }
+.pastel-1 footer strong, .pastel-2 footer strong, .pastel-3 footer strong, .pastel-4 footer strong, .pastel-5 footer strong { color: #101418; }
+.section-dark .pastel-1 h3, .section-dark .pastel-2 h3, .section-dark .pastel-3 h3, .section-dark .pastel-4 h3, .section-dark .pastel-5 h3,
+.section-dark .pastel-1 blockquote, .section-dark .pastel-2 blockquote, .section-dark .pastel-3 blockquote, .section-dark .pastel-4 blockquote, .section-dark .pastel-5 blockquote { color: #101418; }
+.section-dark .pastel-1 p, .section-dark .pastel-2 p, .section-dark .pastel-3 p, .section-dark .pastel-4 p, .section-dark .pastel-5 p,
+.section-dark .pastel-1 footer, .section-dark .pastel-2 footer, .section-dark .pastel-3 footer, .section-dark .pastel-4 footer, .section-dark .pastel-5 footer { color: #4a5560; }
+.section-dark .pastel-1 footer strong, .section-dark .pastel-2 footer strong, .section-dark .pastel-3 footer strong, .section-dark .pastel-4 footer strong, .section-dark .pastel-5 footer strong { color: #101418; }
+.card.pastel-1:hover, .step.pastel-1:hover, .trust-card.pastel-1:hover { background: #d9f2e3; }
+.card.pastel-2:hover, .step.pastel-2:hover, .trust-card.pastel-2:hover { background: #fce4cb; }
+.card.pastel-3:hover, .step.pastel-3:hover, .trust-card.pastel-3:hover { background: #e2ddf9; }
+.card.pastel-4:hover, .step.pastel-4:hover, .trust-card.pastel-4:hover { background: #d3e7fc; }
+.card.pastel-5:hover, .step.pastel-5:hover, .trust-card.pastel-5:hover { background: #f5e9c6; }
 
 /* Decision layer / What you'll learn / Audience — all use .grid-3 + .card */
 .decision-layer { background: var(--soft); border-top: 1px solid var(--line); }
