@@ -7,9 +7,9 @@
 .guides-hero {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 16% 14%, color-mix(in srgb, var(--teal) 24%, transparent), transparent 29%),
-              radial-gradient(circle at 78% 22%, color-mix(in srgb, var(--purple) 20%, transparent), transparent 28%),
-              linear-gradient(135deg, color-mix(in srgb, var(--ink) 90%, var(--teal)) 0%, var(--ink) 50%, var(--text) 100%);
+  background: radial-gradient(circle at 12% 10%, rgba(20,184,166,.28), transparent 30%),
+              radial-gradient(circle at 82% 18%, rgba(139,124,246,.20), transparent 30%),
+              linear-gradient(120deg, #0c3534 0%, #0a0f22 48%, #151b38 100%);
   color: #fff;
   border-bottom: 1px solid #1e293b;
   padding: 64px 0 72px;
