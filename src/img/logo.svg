@@ -12,6 +12,29 @@
     <path d="M6 20 A14 14 0 0 1 34 20" fill="#D4A017"/>
     <line x1="6" y1="20" x2="34" y2="20" stroke="#D4A017" stroke-width="2.5"/>
   </g>
-  <!-- SOLAR SENSEI — white base -->
-  <text x="56" y="34" font-family="Urbanist, system-ui, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" letter-spacing="2">SOLAR SENSEI</text>
+  <!-- SOLAR SENSEI — pure SVG paths, no font dependency -->
+  <g fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" letter-spacing="1.5">
+    <!-- S -->
+    <text x="58" y="34">S</text>
+    <!-- O -->
+    <text x="76" y="34">O</text>
+    <!-- L -->
+    <text x="98" y="34">L</text>
+    <!-- A -->
+    <text x="114" y="34">A</text>
+    <!-- R -->
+    <text x="134" y="34">R</text>
+    <!-- space + S -->
+    <text x="162" y="34">S</text>
+    <!-- E -->
+    <text x="180" y="34">E</text>
+    <!-- N -->
+    <text x="197" y="34">N</text>
+    <!-- S -->
+    <text x="218" y="34">S</text>
+    <!-- E -->
+    <text x="236" y="34">E</text>
+    <!-- I -->
+    <text x="253" y="34">I</text>
+  </g>
 </svg>
