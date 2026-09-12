@@ -19,8 +19,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Urbanist:wght@900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Urbanist:wght@900&display=swap" media="print" onload="this.media='all'">
 
   <link rel="stylesheet" href="src/css/main.css?v=5">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -141,21 +141,36 @@
           <div class="eyebrow">HOW IT WORKS</div>
           <h2>From your data to a confident decision</h2>
         </div>
-        <div class="steps">
-          <div class="step pastel-4">
-            <div class="num">1</div>
+        <div class="step-grid">
+          <div class="step-item">
+            <div class="step-num">1</div>
             <h3>Upload your bill</h3>
-            <p>Share your electricity data — interval data or bill photo. The tool extracts what matters.</p>
+            <p>Share your electricity data. Solar Sensei extracts what matters and models 241+ combinations.</p>
           </div>
-          <div class="step pastel-2">
-            <div class="num">2</div>
-            <h3>We model 241+ combinations</h3>
-            <p>Every system size, battery option, and tariff scenario is tested against your real usage.</p>
-          </div>
-          <div class="step pastel-3">
-            <div class="num">3</div>
-            <h3>You get a ranked shortlist</h3>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <h3>Get a ranked shortlist</h3>
             <p>Best return, fastest payback, lowest bill — each pathway explained with savings, payback and next steps.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <h3>Choose an installer</h3>
+            <p>Use our vetted network or your own quotes. The analysis tells you exactly what to ask for.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <h3>System is installed</h3>
+            <p>The installer completes the work. But the job isn't done yet.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">5</div>
+            <h3>Independent inspection</h3>
+            <p>A qualified technician verifies the install matches the design and performs as expected.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">6</div>
+            <h3>You get a report</h3>
+            <p>Pass, fail, or findings with clear next steps. You know exactly where you stand.</p>
           </div>
         </div>
       </div>
@@ -234,43 +249,6 @@
     <div class="wrap"><a href="index.html" class="brand" aria-label="Solar Sensei"><img src="src/img/logo.svg" alt="Solar Sensei" height="32"></a><div class="foot-links"><a href="how-it-works.html">The Calculator</a><a href="how-it-works.html">How it Works</a><a href="faq.html">FAQ</a><a href="guides.html">Articles/Guides</a><a href="about.html">About Us</a><a href="review-service.html">Review Service</a><a href="contact.html">Contact</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
   </footer>
 
-  <div class="wisdom-badge" id="wisdomBadge" role="complementary" aria-label="Sensei Wisdom">
-    <div class="wisdom-badge-label">Sensei Wisdom</div>
-    <p class="wisdom-badge-quote" id="wisdomQuote"></p>
-  </div>
-
   <script type="module" src="src/js/main.js"></script>
-  <script>
-  (function() {
-    const quotes = [
-      "A house without data is just a roof with opinions.",
-      "The sun does not send invoices. Your grid retailer does.",
-      "He who imports at peak price, exports at feed-in price — and calls it balance.",
-      "Before you chase panels, chase clarity.",
-      "The cheapest kWh is the one you never buy.",
-      "A battery charged wisely is a battery earned twice.",
-      "Three quotes without analysis is just three guesses.",
-      "Know your usage. Then know your options. The rest is negotiation.",
-      "The best time to understand your tariff was yesterday. The second best time is now.",
-      "A wise homeowner reads the bill before buying the system."
-    ];
-    const badge = document.getElementById('wisdomBadge');
-    const quoteEl = document.getElementById('wisdomQuote');
-    const dismissed = localStorage.getItem('wisdom-dismissed');
-
-    if (dismissed) {
-      badge.style.display = 'none';
-      return;
-    }
-
-    quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-
-    badge.addEventListener('click', function() {
-      localStorage.setItem('wisdom-dismissed', '1');
-      badge.classList.add('hidden');
-      setTimeout(function() { badge.style.display = 'none'; }, 300);
-    });
-  })();
-  </script>
 </body>
 </html>
