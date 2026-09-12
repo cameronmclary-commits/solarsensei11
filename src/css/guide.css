@@ -169,7 +169,7 @@
   font-size: clamp(28px, 3vw, 42px);
   line-height: 1.15;
   letter-spacing: -.03em;
-  margin: 48px 0 20px;
+  margin: 32px 0 16px;
   color: var(--text);
 }
 
@@ -181,7 +181,7 @@
 .guide-content > section > p:first-of-type {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text);
@@ -317,7 +317,7 @@
 
 /* Numbered sections - centered heading, left-aligned content */
 .numbered-section {
-  margin: 40px auto;
+  margin: 28px auto;
   max-width: 720px;
   text-align: left;
 }
@@ -389,7 +389,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   max-width: 960px;
 }
 
