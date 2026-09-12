@@ -406,5 +406,16 @@
   </footer>
 
   <script type="module" src="src/js/main.js"></script>
+  <script>
+  document.querySelectorAll('.guide-faq details').forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        document.querySelectorAll('.guide-faq details').forEach(function(other) {
+          if (other !== d) other.open = false;
+        });
+      }
+    });
+  });
+  </script>
 </body>
 </html>
