@@ -413,6 +413,68 @@ section { padding: 64px 0; text-align: center; }
   margin-bottom: 8px;
 }
 
+/* Sub-page hero */
+.hero-sub {
+  background: color-mix(in srgb, var(--teal) 6%, var(--bg));
+  border-bottom: 1px solid var(--line);
+  padding: 64px 0 72px;
+  text-align: center;
+}
+.hero-sub h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: 16px 0 20px;
+  color: var(--text);
+}
+.hero-sub .lead {
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* Fault list */
+.fault-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fault-list li {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+}
+.fault-list li:last-child {
+  border-bottom: 0;
+}
+.fault-severity {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+.fault-severity.high {
+  background: color-mix(in srgb, #ef4444 15%, transparent);
+  color: #f87171;
+}
+.fault-severity.med {
+  background: color-mix(in srgb, var(--amber) 15%, transparent);
+  color: var(--amber);
+}
+.fault-severity.low {
+  background: color-mix(in srgb, var(--teal) 12%, transparent);
+  color: var(--teal);
+}
+
 /* EnergyIQ embed */
 .energyiq-embed {
   max-width: 960px;
