@@ -15,5 +15,5 @@
     <line x1="6" y1="20" x2="34" y2="20" stroke="#D4A017" stroke-width="2.5"/>
   </g>
   <!-- Text: SOLAR SENSEI -->
-  <text x="56" y="33" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">SOLAR SENSEI</text>
+  <text x="56" y="33" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" letter-spacing="1">SOLAR SENSEI</text>
 </svg>
