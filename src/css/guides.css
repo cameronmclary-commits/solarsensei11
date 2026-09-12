@@ -214,9 +214,3 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .guide-soon-badge {
-    background: var(--soft);
-    border-color: var(--line);
-  }
-}

@@ -1,15 +1,14 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="About Solar Sensei — independent, data-driven solar and battery analysis for Australian homeowners. No installer referrals. Vendor-neutral.">
-  <meta name="theme-color" content="#087b6b" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#20d0ad" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="About Solar Sensei — independent, data-driven solar and battery analysis for Australian homeowners. Vetted installer network, post-install inspection, same price as going direct.">
+  <meta name="theme-color" content="#0c0f14">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="About Us — Solar Sensei">
-  <meta property="og:description" content="Independent, data-driven solar and battery analysis. No installer referrals. Vendor-neutral.">
+  <meta property="og:description" content="Independent, data-driven solar and battery analysis. Vetted installer network, post-install inspection, same price as going direct.">
   <meta property="og:image" content="https://solarsensei.com/og-image.jpg">
   <meta property="og:url" content="https://solarsensei.com/about.html">
 
@@ -18,35 +17,35 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
 
-  <link rel="stylesheet" href="src/css/main.css?v=4">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+  <link rel="stylesheet" href="src/css/main.css?v=5">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <title>About Us — Solar Sensei</title>
 </head>
 <body>
   <header class="topbar" role="banner">
     <div class="wrap nav">
-      <a href="index.html" class="brand" aria-label="Solar Sensei home"><span>SOLAR SENSEI</span></a>
+      <a href="index.html" class="brand" aria-label="Solar Sensei home"><img src="src/img/logo.svg" alt="Solar Sensei" height="40"></a>
       <nav class="navlinks" aria-label="Main navigation">
-        <a href="faq.html">FAQ</a>
+        <a href="how-it-works.html">The Calculator</a>
         <a href="how-it-works.html">How it Works</a>
+        <a href="faq.html">FAQ</a>
         <a href="guides.html">Articles/Guides</a>
         <a href="about.html" aria-current="page">About Us</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-dark" href="how-it-works.html#pricing" data-action="generate-report">Start report</a>
-        <button class="theme theme-toggle" id="theme" type="button" aria-label="Switch to dark theme">Dark mode</button>
+        <a class="btn btn-primary" href="how-it-works.html#pricing" data-action="generate-report">Start report</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileLinks">☰</button>
       </div>
     </div>
     <nav class="mobile-links" id="mobileLinks" aria-label="Mobile navigation">
-      <a href="faq.html">FAQ</a>
+      <a href="how-it-works.html">The Calculator</a>
       <a href="how-it-works.html">How it Works</a>
+      <a href="faq.html">FAQ</a>
       <a href="guides.html">Articles/Guides</a>
       <a href="about.html" aria-current="page">About Us</a>
       <a href="contact.html">Contact</a>
-      <button class="theme theme-toggle" id="theme-mobile" type="button" aria-label="Switch to dark theme">Dark mode</button>
       <a class="btn btn-primary" href="how-it-works.html#pricing" data-action="generate-report">Start report</a>
     </nav>
   </header>
@@ -56,16 +55,21 @@
       <div class="wrap">
         <div class="section-head"><div class="eyebrow">About Us</div><h2>Independent analysis, built for homeowners.</h2><p>Solar Sensei turns your authorised electricity data into a visual, ranked analysis — so you can see whether plan switching, solar, a battery, or a combination is the right move for your home.</p></div>
         <div class="grid-3">
-          <div class="card pastel-2"><h3>Independent</h3><p>No installer referrals. Hardware-agnostic modelling that ranks what fits your usage — even if doing nothing is the best choice.</p></div>
-          <div class="card pastel-4"><h3>Data-driven</h3><p>Recommendations are modelled from your actual usage and tariff, not rules of thumb or generic calculators.</p></div>
-          <div class="card pastel-1"><h3>Plain-English</h3><p>Every finding is explained with visuals and clear next steps, ready to take to installers for competitive quotes.</p></div>
+          <div class="card pastel-2"><h3>7 years as a solar consultant</h3><p>Real-world experience across hundreds of installations — not just software. Understanding what works, what doesn't, and why.</p></div>
+          <div class="card pastel-4"><h3>Post-install inspection</h3><p>60% of installations are substandard. Independent inspection at the owner's expense ensures your system performs as promised.</p></div>
+          <div class="card pastel-1"><h3>Vetted installer network</h3><p>Pre-vetted installers who meet our standards. You pay the same price going direct — no referral markups, no conflicts.</p></div>
         </div>
       </div>
     </section>
 
     <section id="visuals" class="section-dark">
       <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Visual report gallery</div><h2>Achieve clarity. Request quotes with confidence.</h2><p>Every important recommendation is supported by a visual representation and a plain-English insight.</p></div>
+        <div class="section-head"><div class="eyebrow">How we're different</div><h2>What the tool does that others don't</h2><p>Every recommendation is backed by data modelling, not sales targets. And the analysis doesn't stop at the quote — we're there for the inspection too.</p></div>
+        <div class="grid-3">
+          <div class="card pastel-5"><h3>Data-driven, not quota-driven</h3><p>Recommendations are modelled from your actual usage and tariff, not rules of thumb or installer targets.</p></div>
+          <div class="card pastel-1"><h3>Same price as going direct</h3><p>No referral fees, no markups. You get competitive quotes without paying more than if you'd found the installer yourself.</p></div>
+          <div class="card pastel-3"><h3>Independent inspection</h3><p>When the install is done, an independent inspection ensures the system meets design specifications and performance expectations.</p></div>
+        </div>
       </div>
     </section>
 
@@ -75,7 +79,7 @@
           <div class="eyebrow" style="color:var(--teal2)">READY TO SEE YOUR REPORT?</div>
           <h2>Find the energy upgrade that actually fits your home.</h2>
           <div class="blobs-actions">
-            <a class="btn btn-primary" href="how-it-works.html#pricing" data-action="about-start">Start My Solar Sensei Report</a>
+            <a class="btn btn-primary" href="how-it-works.html#pricing" data-action="about-start">Start The Calculator</a>
             <a class="btn btn-light" href="how-it-works.html" style="background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.22);">How it Works</a>
           </div>
         </div>
@@ -84,7 +88,7 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap"><div class="brand"><span>SOLAR SENSEI</span></div><div class="foot-links"><a href="faq.html">FAQ</a><a href="how-it-works.html">How it Works</a><a href="guides.html">Articles/Guides</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
+    <div class="wrap"><a href="index.html" class="brand" aria-label="Solar Sensei"><img src="src/img/logo.svg" alt="Solar Sensei" height="32"></a><div class="foot-links"><a href="how-it-works.html">The Calculator</a><a href="how-it-works.html">How it Works</a><a href="faq.html">FAQ</a><a href="guides.html">Articles/Guides</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
   </footer>
 
   <script type="module" src="src/js/main.js"></script>

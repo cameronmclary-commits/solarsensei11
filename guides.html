@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Solar Sensei guides — free, no sign-up resources on solar, battery storage, tariffs and reading your electricity bill.">
-  <meta name="theme-color" content="#087b6b" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#20d0ad" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0c0f14">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Guides — Solar Sensei">
@@ -22,32 +21,33 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
 
-  <link rel="stylesheet" href="src/css/main.css?v=4">
-  <link rel="stylesheet" href="src/css/guides.css?v=4">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+  <link rel="stylesheet" href="src/css/main.css?v=5">
+  <link rel="stylesheet" href="src/css/guides.css?v=5">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <title>Guides — Solar Sensei</title>
 </head>
 <body>
   <header class="topbar" role="banner">
     <div class="wrap nav">
-      <a href="index.html" class="brand" aria-label="Solar Sensei home">SOLAR <span>SENSEI</span></a>
+      <a href="index.html" class="brand" aria-label="Solar Sensei home"><img src="src/img/logo.svg" alt="Solar Sensei" height="40"></a>
       <nav class="links" aria-label="Main navigation">
-        <a href="faq.html">FAQ</a>
+        <a href="how-it-works.html">The Calculator</a>
         <a href="how-it-works.html">How it Works</a>
+        <a href="faq.html">FAQ</a>
         <a href="guides.html" aria-current="page">Articles/Guides</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="actions">
         <a class="button primary" href="how-it-works.html#pricing" data-action="generate-report">Start report</a>
-        <button class="theme theme-toggle" id="theme" aria-label="Switch to dark theme">Dark mode</button>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileLinks">☰</button>
       </div>
     </div>
     <nav class="mobile-links" id="mobileLinks" aria-label="Mobile navigation">
-      <a href="faq.html">FAQ</a>
+      <a href="how-it-works.html">The Calculator</a>
       <a href="how-it-works.html">How it Works</a>
+      <a href="faq.html">FAQ</a>
       <a href="guides.html" aria-current="page">Articles/Guides</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
@@ -58,7 +58,7 @@
   <main class="guides-page">
     <section class="guides-hero">
       <div class="wrap">
-        <div class="pill" style="display:inline-block; margin-bottom:22px; border-color:color-mix(in srgb, var(--teal2) 45%, transparent); color:#99f6e4; background:color-mix(in srgb, var(--teal) 12%, transparent);">BLOG</div>
+        <div class="pill" style="display:inline-block; margin-bottom:22px; border-color:color-mix(in srgb, var(--teal2) 45%, transparent); color:#99f6e4; background:color-mix(in srgb, var(--teal) 12%, transparent);">ARTICLES</div>
         <h1>Solar knowledge, no sales pitch.</h1>
         <p class="lead">Honest articles about solar, batteries, electricity plans, and getting a fair deal in Australia.</p>
       </div>
@@ -143,7 +143,7 @@
 
   <footer class="footer" role="contentinfo">
     <div class="wrap footer-row">
-      <a href="index.html" class="brand" aria-label="Solar Sensei">SOLAR <span>SENSEI</span></a>
+      <a href="index.html" class="brand" aria-label="Solar Sensei"><img src="src/img/logo.svg" alt="Solar Sensei" height="32"></a>
       <div class="footer-links">
         <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy Policy</a>
