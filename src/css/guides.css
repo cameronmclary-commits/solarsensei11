@@ -1,0 +1,222 @@
+/* Guides listing page */
+
+.guides-page .topbar {
+  border-bottom: 1px solid var(--line);
+}
+
+.guides-hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 12% 10%, rgba(20,184,166,.28), transparent 30%),
+              radial-gradient(circle at 82% 18%, rgba(139,124,246,.20), transparent 30%),
+              linear-gradient(120deg, #0c3534 0%, #0a0f22 48%, #151b38 100%);
+  color: #fff;
+  border-bottom: 1px solid #1e293b;
+  padding: 64px 0 72px;
+  text-align: left;
+}
+
+.guides-hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: 0 0 20px;
+  max-width: 900px;
+  margin-left: 0;
+  margin-right: auto;
+  color: #fff;
+  text-align: left;
+}
+
+.guides-hero .lead {
+  font-size: clamp(18px, 2vw, 24px);
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.guides-list {
+  padding: 64px 0;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.guide-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.guide-card.coming-soon {
+  opacity: .85;
+}
+
+.guide-soon-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--soft);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.guide-card-tags {
+  margin-bottom: 16px;
+}
+
+.guide-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.guide-card h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.guide-card > p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.guide-card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+}
+
+.guide-time {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.guide-link {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--teal);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.guide-link:hover {
+  color: var(--orange);
+}
+
+.guide-card.coming-soon .guide-link {
+  display: none;
+}
+
+/* Guides CTA */
+.guides-cta {
+  padding: 64px 0;
+  background: var(--soft);
+  border-top: 1px solid var(--line);
+}
+
+.cta-card {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cta-card h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  margin: 0 0 16px;
+}
+
+.cta-card > p {
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+.cta-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cta-pills span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .guides-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .guides-hero {
+    padding: 48px 0 56px;
+  }
+
+  .guides-hero h1 {
+    font-size: 36px;
+  }
+
+  .guides-list {
+    padding: 48px 0;
+  }
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guides-cta {
+    padding: 48px 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .guide-soon-badge {
+    background: var(--soft);
+    border-color: var(--line);
+  }
+}

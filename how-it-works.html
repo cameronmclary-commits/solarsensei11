@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="How Solar Sensei works — share your usage figures, receive a visual report comparing plans, solar and battery options, then request quotes with confidence.">
+  <meta name="theme-color" content="#087b6b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#20d0ad" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How it Works — Solar Sensei">
+  <meta property="og:description" content="Share your usage figures, receive a visual report comparing plans, solar and battery options, then request quotes with confidence.">
+  <meta property="og:image" content="https://solarsensei.com/og-image.jpg">
+  <meta property="og:url" content="https://solarsensei.com/how-it-works.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+
+  <link rel="stylesheet" href="src/css/main.css?v=4">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+
+  <title>How it Works — Solar Sensei</title>
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="wrap nav">
+      <a href="index.html" class="brand" aria-label="Solar Sensei home"><span>SOLAR SENSEI</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="faq.html">FAQ</a>
+        <a href="how-it-works.html" aria-current="page">How it Works</a>
+        <a href="guides.html">Articles/Guides</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-dark" href="#pricing" data-action="generate-report">Start report</a>
+        <button class="theme theme-toggle" id="theme" type="button" aria-label="Switch to dark theme">Dark mode</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileLinks">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-links" id="mobileLinks" aria-label="Mobile navigation">
+      <a href="faq.html">FAQ</a>
+      <a href="how-it-works.html" aria-current="page">How it Works</a>
+      <a href="guides.html">Articles/Guides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme theme-toggle" id="theme-mobile" type="button" aria-label="Switch to dark theme">Dark mode</button>
+      <a class="btn btn-primary" href="#pricing" data-action="generate-report">Start report</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">How it works</div><h2>From your figures to a confident decision.</h2><p>Enter your figures, or upload your bill — the Sensei will promptly report.</p></div>
+        <div class="steps">
+          <div class="step pastel-3"><div class="num">1</div><h3>Share your usage</h3><p>Enter your figures, or upload your bill, so the analysis is built on your actual electricity use.</p></div>
+          <div class="step pastel-5"><div class="num">2</div><h3>Receive your report</h3><p>Get a visual report showing the best electricity plan, solar size, battery option, savings, payback and next step.</p></div>
+          <div class="step pastel-2"><div class="num">3</div><h3>Request quotes with confidence</h3><p>Know what you need before pricing what you don't — then let quotes compete.</p></div>
+          <div class="step pastel-4"><div class="num">4</div><h3>Add expert guidance</h3><p>Review the report yourself for $0, or add the $90 consultation for interpretation and quote comparison support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">WHY SOLAR SENSEI</div><h2>To determine the best solution, first we must understand your energy use.</h2><p>Solar Sensei channels what your electricity bill has been trying to tell you.</p></div>
+        <div class="grid-3">
+          <div class="card pastel-1"><div class="icon" style="background:linear-gradient(135deg,var(--teal),#0d9488);">01</div><h3>Modelled from your data</h3><p>Analyse how the home uses power — expensive consumption windows, seasonal variations, and existing system consumption and export levels (where applicable).</p></div>
+          <div class="card pastel-2"><div class="icon" style="background:linear-gradient(135deg,var(--orange),#dc2626);">02</div><h3>Separates electricity plan impact</h3><p>Ascertain the impact of system choice separate to a possible change of plan. Quantify, to qualify.</p></div>
+          <div class="card pastel-3"><div class="icon" style="background:linear-gradient(135deg,#8b7cf6,#6d5ef0);">03</div><h3>Review your optimal solutions</h3><p>Balance savings, payback period, energy independence, and outlay, vs. the cost of doing nothing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section-light">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Pricing</div><h2>One complete report. Two levels of support.</h2><p>Choose the self-guided Solar Sensei Report or add a 45-minute consultation to discuss findings, compare quotes and plan next steps.</p></div>
+        <div class="price-wrap">
+          <article class="price-card"><span class="tag" style="background:var(--ink)">Self-guided</span><h3>Solar Sensei Report</h3><p>Full personalised automated report generated from authorised interval data.</p><div class="price">$0 <small>one-off</small></div><ul class="features"><li>Full visual Solar Sensei report</li><li>Current plan analysis</li><li>Plan, solar and battery comparison</li><li>Savings attribution and payback forecast</li><li>Downloadable/shareable report</li></ul><a class="btn btn-primary" href="#pricing" data-action="pricing-free">Get my report</a></article>
+          <article class="price-card featured"><span class="tag">Decision support</span><h3>Report + Consultation</h3><p>The full report plus expert help interpreting findings and comparing quotes.</p><div class="price">$90 <small>one-off</small></div><ul class="features"><li>Everything in the $0 report</li><li>45-minute phone/video consultation</li><li>Report walkthrough</li><li>Quote comparison support</li><li>Questions to ask installers</li><li>Personalised next-step action plan</li></ul><a class="btn btn-primary" href="#pricing" data-action="pricing-consult">Get report + consultation</a></article>
+        </div>
+        <div class="upgrade">Already have your Solar Sensei Report? Add the consultation later for $90.</div>
+      </div>
+    </section>
+
+    <section class="cta-blobs">
+      <div class="wrap">
+        <div class="blobs-cta">
+          <div class="eyebrow" style="color:var(--teal2)">READY TO SEE YOUR REPORT?</div>
+          <h2>Find the energy upgrade that actually fits your home.</h2>
+          <div class="blobs-actions">
+            <a class="btn btn-primary" href="#pricing" data-action="how-start">Start My Solar Sensei Report</a>
+            <a class="btn btn-light" href="faq.html" style="background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.22);">Common questions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><div class="brand"><span>SOLAR SENSEI</span></div><div class="foot-links"><a href="faq.html">FAQ</a><a href="how-it-works.html">How it Works</a><a href="guides.html">Articles/Guides</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><p class="fine">© Solar Sensei. Projections are estimates and should be confirmed before purchase.</p></div>
+  </footer>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
