@@ -342,6 +342,10 @@ section { padding: 64px 0; text-align: center; }
 .trust-card blockquote { margin: 0 0 16px; font-size: 15px; line-height: 1.65; }
 .trust-card footer { color: var(--muted); font-size: 15px; }
 .trust-card footer strong { color: var(--text); }
+.trust-card.pastel-1, .trust-card.pastel-2, .trust-card.pastel-3, .trust-card.pastel-4, .trust-card.pastel-5 { color: #1a1a2e; }
+.trust-card.pastel-1 blockquote, .trust-card.pastel-2 blockquote, .trust-card.pastel-3 blockquote, .trust-card.pastel-4 blockquote, .trust-card.pastel-5 blockquote { color: #2d2d44; }
+.trust-card.pastel-1 footer, .trust-card.pastel-2 footer, .trust-card.pastel-3 footer, .trust-card.pastel-4 footer, .trust-card.pastel-5 footer { color: #555570; }
+.trust-card.pastel-1 footer strong, .trust-card.pastel-2 footer strong, .trust-card.pastel-3 footer strong, .trust-card.pastel-4 footer strong, .trust-card.pastel-5 footer strong { color: #1a1a2e; }
 
 /* Trust independence */
 .trust { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; align-items: center; }
