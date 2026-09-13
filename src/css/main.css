@@ -39,6 +39,7 @@ body {
   overflow-x: hidden;
   overflow-wrap: break-word;
 }
+section:not(.hero):not(.section-dark):not(.cta-blobs):not(.hero-sub) { background: var(--bg); }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; height: auto; display: block; }
 :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
@@ -79,11 +80,12 @@ img { max-width: 100%; height: auto; display: block; }
 /* Hero */
 .hero {
   position: relative; overflow: hidden;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
+  min-height: 100vh;
 }
 .hero-bg {
-  position: absolute; inset: 0;
+  position: fixed; inset: 0;
   z-index: 0;
 }
 .hero-bg img {
