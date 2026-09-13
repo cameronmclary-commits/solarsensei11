@@ -1130,6 +1130,31 @@
   line-height: 1.55;
 }
 
+/* Article figures */
+.guide-content figure {
+  margin: 32px auto;
+  max-width: 720px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.guide-content figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.guide-content figure figcaption {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--muted);
+  padding: 14px 20px;
+  line-height: 1.55;
+  border-top: 1px solid var(--line);
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   .guide-layout {
