@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Stop relying on misleading averages. Discover the true solar battery payback reality for Australian homeowners and how to calculate your actual ROI today.">
+  <meta name="theme-color" content="#0c0f14">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The 2026 Battery Payback Reality: Why Averages Fail Australian Homeowners — Solar Sensei">
+  <meta property="og:description" content="Stop relying on misleading averages. Discover the true solar battery payback reality for Australian homeowners and how to calculate your actual ROI today.">
+  <meta property="og:image" content="https://solarsensei.com/og-image.jpg">
+  <meta property="og:url" content="https://solarsensei.com/guide-battery-payback.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The 2026 Battery Payback Reality: Why Averages Fail Australian Homeowners — Solar Sensei">
+  <meta name="twitter:description" content="Stop relying on misleading averages. Discover the true solar battery payback reality for Australian homeowners.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Urbanist:wght@900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Urbanist:wght@900&display=swap" media="print" onload="this.media='all'">
+
+  <link rel="stylesheet" href="src/css/main.css?v=5">
+  <link rel="stylesheet" href="src/css/guide.css?v=5">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <title>The 2026 Battery Payback Reality: Why Averages Fail Australian Homeowners — Solar Sensei</title>
+  <style>
+    .principle-box {
+      background: color-mix(in srgb, var(--teal) 8%, var(--surface));
+      border-left: 4px solid var(--teal);
+      border-radius: 0 14px 14px 0;
+      padding: 22px 26px;
+      margin: 28px auto;
+      max-width: 720px;
+    }
+    .principle-label {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .principle-box p {
+      font-size: 16px;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .threshold-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+    .threshold-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+    .threshold-card p {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media(min-width:640px) { .case-grid { grid-template-columns: 1fr 1fr; } }
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 28px;
+    }
+    .case-card .case-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .case-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+    .case-card p {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .lever-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .lever-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+    .lever-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+    .lever-list li strong {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap header-row">
+      <a href="index.html" class="brand" aria-label="Solar Sensei">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 48" fill="none" style="height:40px; width:auto;">
+  <g transform="translate(4, 4)">
+    <line x1="20" y1="0" x2="20" y2="6" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="20" y1="34" x2="20" y2="40" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="20" x2="6" y2="20" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="34" y1="20" x2="40" y2="20" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="5.86" y1="5.86" x2="10.1" y2="10.1" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="29.9" y1="29.9" x2="34.14" y2="34.14" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="34.14" y1="5.86" x2="29.9" y2="10.1" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="10.1" y1="29.9" x2="5.86" y2="34.14" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M6 20 A14 14 0 0 1 34 20" fill="#D4A017"/>
+    <line x1="6" y1="20" x2="34" y2="20" stroke="#D4A017" stroke-width="2.5"/>
+  </g>
+  <text x="56" y="34" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" letter-spacing="1.5">SOLAR SENSEI</text>
+</svg>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="how-it-works.html">The Calculator</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="faq.html">FAQ</a>
+        <a href="guides.html">Articles / Guides</a>
+        <a href="about.html">About Us</a>
+        <a href="review-service.html">Review Service</a>
+        <a href="contact.html">Contact</a>
+        <a class="button primary nav-cta" href="how-it-works.html#pricing">The Sensei</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="guide-article" id="top">
+      <div class="guide-hero">
+        <div class="wrap">
+          <div class="guide-breadcrumb"><a href="guides.html">Articles / Guides</a></div>
+          <h1>The 2026 Battery Payback Reality: Why Averages Fail Australian Homeowners</h1>
+          <p class="guide-subtitle">Stop relying on misleading averages. Discover the true solar battery payback reality for Australian homeowners and how to calculate your actual ROI today.</p>
+          <div class="guide-meta">
+            <span>Solar Sensei</span>
+            <span>·</span>
+            <time datetime="2026-09-13">September 2026</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-content wrap">
+        <section id="the-2026-shift">
+          <h2>The 2026 Shift: Why Battery Economics Have Changed</h2>
+          <p>The australian home battery payback period 2026 looks fundamentally different from what most published estimates suggest — because the market itself has fundamentally changed.</p>
+          <p>As recently as 2023, home batteries were a premium product for early adopters willing to pay a significant premium for energy independence. That era is over. RenewEconomy captured the inflection point precisely: "2025 wasn't so much a growth year for Australian batteries, it was the year they went mainstream." And 2026 is where that mainstream momentum meets a new economic reality.</p>
+          <p>Modern system capacity has expanded considerably alongside falling hardware costs. Where early residential batteries topped out around 6–7 kWh, today's standard installations commonly land between 10 kWh and 13 kWh — enough to cover a typical household through an evening peak and beyond. More storage means more opportunity to displace expensive grid electricity with energy you generated yourself.</p>
+          <p>That brings us to self-consumption: the practice of storing solar energy during the day and using it when grid prices are highest. This single behavior is now the primary engine driving return on investment, not export credits or feed-in tariffs. And here is where generic payback estimates consistently fail Australian homeowners — they flatten out the enormous variation in how, when, and where households actually consume power. The numbers that matter most to your situation rarely match the national average.</p>
+        </section>
+
+        <section id="costs-rebates">
+          <h2>The Math of 2026: Costs, Rebates, and the 6x Value Gap</h2>
+          <p>In 2026, the solar battery cost Australia homeowners face has dropped sharply — but the real story is not just the lower price tag; it is the widening gap between what your exported solar earns and what grid power costs you.</p>
+          <p>Installed costs for standard systems have come down meaningfully. A 10 kWh to 13 kWh battery fully installed now typically sits between $8,500 and $12,000 after federal rebates — a figure that would have looked ambitious just two years ago. And that figure already accounts for the federal Cheaper Home Batteries Program, which reduces eligible storage system costs by approximately 30%, effectively taking thousands of dollars off the upfront investment before you negotiate a single dollar with an installer.</p>
+          <p>The value gap is where the math becomes genuinely compelling. Most Australian retailers currently pay feed-in tariffs of just 3 to 8 cents per kilowatt-hour for exported solar energy. Peak grid electricity, on the other hand, costs 35 to 45 cents per kilowatt-hour depending on your state and retailer. That is a difference of roughly six times in energy value — meaning every kilowatt-hour you store and self-consume instead of export is worth six to fifteen times more than selling it back.</p>
+
+          <div class="principle-box">
+            <div class="principle-label">The Principle</div>
+            <p>A battery does not generate returns by earning feed-in revenue; it generates returns by displacing expensive grid purchases. And as feed-in tariffs continue to compress in most states, that gap is only widening.</p>
+          </div>
+        </section>
+
+        <section id="payback-range">
+          <h2>Why Your Payback Period Could Range from 3 to 10 Years</h2>
+          <p>The gap between a 3-year and a 10-year battery payback is not a rounding error — it reflects entirely different households, usage patterns, and state-level incentive stacks.</p>
+          <p>For most Australian homes, the payback period for a solar battery in 2026 ranges between 5 and 10 years — a wide band that reflects differences in consumption volume, grid tariff structures, and how well a household's daily rhythm actually matches what a battery does best.</p>
+
+          <div class="case-grid">
+            <div class="case-card">
+              <div class="case-label" style="color:var(--teal);">Standard Case</div>
+              <h3>Moderate household — 5 to 8 years</h3>
+              <p>A typical household drawing around 20–25 kWh per day, with moderate evening energy use and no EV, sits in the middle of that range. The battery displaces a meaningful portion of peak-rate grid imports, but cycling frequency stays below the theoretical maximum. State incentives help — NSW homeowners can access the Cheaper Home Batteries Program, while South Australia and Queensland each carry their own rebate frameworks — but the underlying consumption profile caps how fast those savings compound.</p>
+            </div>
+            <div class="case-card">
+              <div class="case-label" style="color:#f59e0b;">High-Performance Case</div>
+              <h3>EV or high loads — 3 to 4 years</h3>
+              <p>The picture shifts dramatically for households with an electric vehicle, high evening loads, or both. An EV charging overnight from stored solar rather than grid power can add thousands of dollars annually in avoided costs, turning a modest battery into a high-velocity asset. And in Western Australia, where feed-in tariffs have been compressed, the incentive to self-consume stored energy is structurally stronger, which tends to accelerate payback further.</p>
+            </div>
+          </div>
+
+          <div class="principle-box" style="border-left-color:#f59e0b; background:color-mix(in srgb, #f59e0b 8%, var(--surface));">
+            <div class="principle-label" style="color:#f59e0b;">Warning</div>
+            <p>If your daily draw is under 15 kWh, applying an average-based estimate will almost always make a battery look better than it actually is. The battery cycles less often, earns back less per cycle, and the fixed cost amortizes over fewer meaningful events.</p>
+          </div>
+        </section>
+
+        <section id="generic-calculators">
+          <h2>The Danger of Using Generic ROI Calculators</h2>
+          <p>When asking whether a home battery is worth it in Australia 2026, the answer depends almost entirely on data quality — and most online calculators are working with the wrong data.</p>
+          <p><strong>Load profiles are the core issue.</strong> Generic calculators assume a household draws power evenly throughout the day, but in practice, usage is clustered — morning showers, evening cooking, late-night entertainment. A battery that looks perfectly sized on a spreadsheet can turn out to be chronically underutilized because the household's peak demand falls outside the battery's optimal discharge window.</p>
+          <p><strong>Cycling assumptions compound the problem.</strong> Most generic tools assume 100% battery cycling every single day — a figure that flatters the math but rarely reflects reality. Weather variation, seasonal solar generation shifts, and household routine changes mean actual cycling rates often sit closer to 60–70%. Overestimating daily cycles inflates projected savings and quietly extends your real payback period by years, not months.</p>
+          <p><strong>Bill-level modeling is the antidote.</strong> What actually moves the needle is running different battery sizes against your own historical consumption data, tariff structure, and feed-in rates — not industry averages. A solar battery system sized for your specific load profile will consistently outperform a larger system chosen on optimistic assumptions.</p>
+        </section>
+
+        <section id="maximizing">
+          <h2>Maximizing Your Investment: Beyond the Break-Even Point</h2>
+          <p>Getting the most from a home battery in 2026 is less about which brand you buy and more about how intelligently you deploy the system you have.</p>
+          <p>Running a battery storage payback calculator will show you a projected break-even date, but that figure assumes relatively static behavior. In practice, small operational decisions can meaningfully compress your payback timeline — or extend it if ignored.</p>
+
+          <h3>Optimization Levers</h3>
+          <ul class="lever-list">
+            <li><strong>Appliance scheduling:</strong> Run dishwashers, washing machines, and dryers during peak solar generation hours to maximize the energy available for battery charging. Shifting these loads away from evening peak periods reduces grid draw and improves self-consumption rates.</li>
+            <li><strong>Virtual Power Plant (VPP) enrollment:</strong> VPP programs allow your battery to export stored energy during grid stress events in exchange for bill credits or payments. For eligible households, this participation can shave months off a payback period by generating revenue the original ROI estimate never counted.</li>
+            <li><strong>System sizing over brand loyalty:</strong> A correctly sized system — matched to your actual daily consumption — consistently outperforms an oversized premium unit in the same household.</li>
+            <li><strong>EV integration:</strong> Future-proofing your install with a battery that supports vehicle-to-home (V2H) charging can dramatically increase utilization rates, turning overnight EV charging into a controlled, cost-optimized cycle rather than a grid expense.</li>
+          </ul>
+
+          <p>Households that combine appliance scheduling and VPP enrollment typically see a genuine reduction in effective payback of 12 to 18 months compared to a passive install. These are not theoretical gains — they reflect the difference between treating a battery as a set-and-forget appliance versus an active energy management tool.</p>
+        </section>
+
+        <section id="bottom-line">
+          <h2>The Bottom Line: Is a Battery Worth It for You in 2026?</h2>
+          <p>A home battery is financially viable in 2026 if your peak grid rate exceeds 35 cents per kilowatt-hour — but that single threshold only tells part of the story.</p>
+          <p>The 35c/kWh benchmark matters because it sets the floor for meaningful arbitrage. Below that rate, the savings you generate by displacing grid power simply cannot outpace the cost of capital over a realistic ownership period. Above it, every kilowatt-hour you shift from grid to battery starts compounding in your favor. In markets like New South Wales and South Australia, where peak tariffs routinely exceed 40–45c/kWh, the math has shifted decisively toward viability for households with the right usage profile.</p>
+          <p>Federal rebates are a genuine tailwind right now. Under the Cheaper Home Batteries Program, subsidies currently cover roughly 30% of upfront system costs — a meaningful reduction that shortens payback by two to three years for many households. However, that relief is capacity-capped and demand is high. As RenewEconomy notes, program design changes under version 2.0 will affect both pricing and which configurations qualify, so acting before caps tighten is a legitimate consideration.</p>
+          <p>Payback periods under six years are achievable, but they depend on stacking favorable conditions. High self-consumption rates — typically above 80% — combined with time-of-use tariff arbitrage get you close. Add an EV charging load and the economics improve further, because the battery is doing more work per day and recovering its cost across more use cycles.</p>
+
+          <div style="margin:24px 0;">
+            <div class="threshold-card">
+              <h3>1. The 35c/kWh threshold is your first filter</h3>
+              <p>If your peak grid rate falls below it, most battery configurations will struggle to deliver a compelling return regardless of system size or brand.</p>
+            </div>
+            <div class="threshold-card">
+              <h3>2. Federal rebates reduce upfront cost by roughly 30%, but they are capacity-capped</h3>
+              <p>Program availability under the Cheaper Home Batteries scheme is not guaranteed to remain at current levels throughout 2026.</p>
+            </div>
+            <div class="threshold-card">
+              <h3>3. Sub-six-year payback requires high self-consumption or EV charging</h3>
+              <p>Households without at least one demand accelerator should plan for a longer payback horizon when modeling their decision.</p>
+            </div>
+            <div class="threshold-card">
+              <h3>4. Installer ROI claims need independent verification</h3>
+              <p>Only a model built on your actual electricity bill data can confirm whether a quoted payback period reflects your real circumstances.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="stop-guessing">
+          <h2>Stop Guessing: How to Model Your Real Payback Period</h2>
+          <p>Your electricity bill is the only document that tells the truth about whether a home battery will pay off — not national averages, not installer estimates, and not headline rebate figures.</p>
+          <p>Every insight covered in this article — peak rate thresholds, time-of-use arbitrage, rebate stacking, and dispatch strategy — only becomes actionable when mapped against your specific consumption patterns, your tariff structure, and your grid connection terms. Generic calculators cannot do that. They work from assumptions that may have no relationship to how your household actually draws power.</p>
+          <p>Solar Sensei bridges that gap by using your actual bill data to rank hundreds of battery and solar configurations against your real usage profile. Rather than presenting a single payback estimate, the platform surfaces a ranked set of scenarios so you can see exactly which system size, which rebate combination, and which operating mode produces the strongest return for your address.</p>
+          <p>Being data-ready before you speak to an installer tends to shift the entire conversation in your favor. When you walk in knowing your average daily consumption, your off-peak differential, and your modeled payback range, you are comparing quotes against a benchmark — not accepting the first number offered.</p>
+
+          <div class="guide-cta-box">
+            <h3>The 2026 battery market rewards preparation.</h3>
+            <p>Upload your electricity bill to Solar Sensei and receive a personalized ROI report built from your numbers — because your payback period deserves better than an average.</p>
+            <a class="button primary" href="how-it-works.html#pricing" style="display:inline-block; border-radius:999px; padding:14px 24px;">Start your free analysis</a>
+          </div>
+        </section>
+
+        <section id="guide-faq" class="guide-faq">
+          <h2>Frequently asked questions</h2>
+          <details>
+            <summary>What is the average battery payback period in Australia in 2026?</summary>
+            <p>For most Australian homes, the payback period ranges between 5 and 10 years. Households with EVs or high evening consumption can see break-even points as low as 3 to 4 years, while low-consumption households (under 15 kWh/day) may face longer timelines. The only reliable way to know your specific payback is to model it against your actual bill data.</p>
+          </details>
+          <details>
+            <summary>How much does a home battery cost in Australia in 2026?</summary>
+            <p>A 10–13 kWh battery fully installed typically sits between $8,500 and $12,000 after federal rebates. The Cheaper Home Batteries Program reduces eligible storage system costs by approximately 30%, but the program is capacity-capped and demand is high.</p>
+          </details>
+          <details>
+            <summary>Are generic ROI calculators reliable?</summary>
+            <p>Most online calculators use industry-average load profiles and assume 100% daily cycling — assumptions that rarely match real household behavior. They tend to overstate savings and understate payback periods. A calculator built on your actual electricity bill data, tariff structure, and consumption patterns is far more reliable.</p>
+          </details>
+          <details>
+            <summary>What is the 35c/kWh threshold?</summary>
+            <p>If your peak grid electricity rate falls below 35 cents per kilowatt-hour, most battery configurations will struggle to deliver a compelling return. Above that rate, every kilowatt-hour you store and self-consume instead of importing from the grid starts compounding in your favor.</p>
+          </details>
+          <details>
+            <summary>Can I shorten my battery payback period?</summary>
+            <p>Yes. Running appliances during peak solar generation, enrolling in a Virtual Power Plant (VPP) program, and integrating EV charging can reduce effective payback by 12 to 18 months compared to a passive install. System sizing matched to your actual consumption also significantly improves returns.</p>
+          </details>
+        </section>
+
+        <section id="comparison-table" style="margin-top:48px;">
+          <h2>Comparison: Solar-Only vs. Solar + Battery ROI</h2>
+          <div style="overflow-x:auto;">
+            <table class="border-collapse table-auto w-full" style="min-width:75px; width:100%;">
+              <thead>
+                <tr>
+                  <th style="border:1px solid var(--line); background:var(--surface-sunken); padding:10px 12px; text-align:left;">Metric</th>
+                  <th style="border:1px solid var(--line); background:var(--surface-sunken); padding:10px 12px; text-align:left;">Solar-Only</th>
+                  <th style="border:1px solid var(--line); background:var(--surface-sunken); padding:10px 12px; text-align:left;">Solar + Battery</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Typical Payback</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">3–5 years</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">5–10 years (3–4 with EV/high loads)</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Primary ROI Driver</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Daytime self-consumption + feed-in</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Evening peak-rate displacement (6x value gap)</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Federal Rebate</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">STCs</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Cheaper Home Batteries Program (~30% off)</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">VPP Eligibility</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">No</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Yes — additional bill credits</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Key Risk</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Feed-in tariff compression</td>
+                  <td style="border:1px solid var(--line); padding:10px 12px;">Oversizing beyond actual consumption</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="sources" style="margin-top:48px;">
+          <h2>Sources &amp; Authoritative References</h2>
+          <ul style="margin-top:16px; padding-left:20px; color:var(--text-dim); font-size:14px; line-height:1.7;">
+            <li>RenewEconomy: 2025 Australian battery market mainstream adoption analysis</li>
+            <li>Clean Energy Regulator: Cheaper Home Batteries Program — program design and capacity caps</li>
+            <li>Solar Sensei Analysis: Automated energy profile analysis and investment modelling report</li>
+          </ul>
+        </section>
+
+        <p style="margin-top:32px; padding:16px; border:1px solid var(--line); border-radius:8px; font-size:13px; color:var(--text-dim); line-height:1.6;"><strong>GENERAL INFORMATION ONLY</strong> — This article provides household-level guidance to support informed decision-making. It does not replace a site inspection, electrical design, financial advice or advice from a qualified solar and battery installer. Actual system suitability, cost, savings and installation requirements depend on site-specific circumstances.</p>
+      </div>
+    </article>
+
+    <section class="guide-bottom-cta">
+      <div class="wrap">
+        <div class="bottom-cta-card">
+          <div class="pill" style="display:inline-block; margin-bottom:24px; border-color:color-mix(in srgb, var(--teal) 30%, var(--line)); color:var(--teal); background:color-mix(in srgb, var(--teal) 8%, transparent);">FREE · NO SIGN-UP REQUIRED</div>
+          <h2>Make the decision before you compare the quotes.</h2>
+          <p>Model your household's usage, tariff and existing system first — then compare installers against a clear brief.</p>
+          <a class="button primary" href="how-it-works.html#pricing" style="display:inline-block; border-radius:999px; padding:16px 28px; font-size:16px;">Start your free analysis →</a>
+          <div class="bottom-cta-pills">
+            <span>No sign-up required</span>
+            <span>📍 Australia-wide</span>
+            <span>Indicative modelling — not a quote</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="keep-reading">
+      <div class="wrap">
+        <h2>Keep reading</h2>
+        <div class="keep-grid">
+          <a href="guide-before-quotes.html" class="keep-card">
+            <div class="keep-tag">GUIDE · SOLAR</div>
+            <h3>Before you get solar quotes</h3>
+            <p>Find the right solar and battery setup before comparing installers.</p>
+          </a>
+          <a href="guide-qld-installs.html" class="keep-card">
+            <div class="keep-tag">GUIDE · QUEENSLAND</div>
+            <h3>Getting quotes for solar in Queensland?</h3>
+            <p>How to ensure a quality install — and why a good price doesn't guarantee one.</p>
+          </a>
+          <a href="how-it-works.html#pricing" class="keep-card">
+            <div class="keep-tag">FREE TOOL</div>
+            <h3>Solar &amp; battery calculator</h3>
+            <p>Know what you need before the quotes arrive.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap footer-row">
+      <a href="index.html" class="brand" aria-label="Solar Sensei"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 48" fill="none" style="height:32px; width:auto;">
+  <g transform="translate(4, 4)">
+    <line x1="20" y1="0" x2="20" y2="6" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="20" y1="34" x2="20" y2="40" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="20" x2="6" y2="20" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="34" y1="20" x2="40" y2="20" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="5.86" y1="5.86" x2="10.1" y2="10.1" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="29.9" y1="29.9" x2="34.14" y2="34.14" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="34.14" y1="5.86" x2="29.9" y2="10.1" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="10.1" y1="29.9" x2="5.86" y2="34.14" stroke="#D4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M6 20 A14 14 0 0 1 34 20" fill="#D4A017"/>
+    <line x1="6" y1="20" x2="34" y2="20" stroke="#D4A017" stroke-width="2.5"/>
+  </g>
+  <text x="56" y="34" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" letter-spacing="1.5">SOLAR SENSEI</text>
+</svg></a>
+      <div class="footer-links">
+        <a href="review-service.html">Review Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="independence.html">Affiliate and Independence Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/js/main.js"></script>
+  <script>
+  document.querySelectorAll('.guide-faq details').forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        document.querySelectorAll('.guide-faq details').forEach(function(other) {
+          if (other !== d) other.open = false;
+        });
+      }
+    });
+  });
+  </script>
+</body>
+</html>
