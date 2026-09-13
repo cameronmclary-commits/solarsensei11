@@ -332,11 +332,8 @@ section { padding: 64px 0; text-align: center; }
 .price-card.featured .tag { background: var(--teal); }
 .price-card h3 { font-size: 29px; line-height: 1; margin: 16px 0 8px; }
 .price-card p { flex: 0 1 auto; }
-.price-card .price { flex: 0 1 auto; }
 .price-card ul { flex: 1 1 auto; }
 .price-sub { color: var(--muted); font-size: 16px; margin: 0 0 18px; }
-.price { font-size: 66px; font-weight: 950; letter-spacing: -.075em; line-height: 1; margin: 18px 0; }
-.price small { font-size: 14px; letter-spacing: 0; color: var(--muted); }
 .features { list-style: none; padding: 0; margin: 22px 0; }
 .features li { margin: 11px 0; display: flex; gap: 10px; color: var(--text); }
 .features li::before { content: "✓"; color: var(--teal); font-weight: 950; }
@@ -605,7 +602,6 @@ section { padding: 64px 0; text-align: center; }
   .grid-3, .steps, .included-serene { grid-template-columns: 1fr; }
   .hero .wrap { padding-top: 32px; min-height: 360px; }
   .hero h1 { font-size: 42px; }
-  .price { font-size: 52px; }
   .final-cta h2 { font-size: 39px; }
   .section-head h2 { font-size: 34px; }
   .section-head p { font-size: 18px; }
@@ -620,7 +616,6 @@ section { padding: 64px 0; text-align: center; }
   .brand { font-size: 19px; }
   .theme { padding: 9px 12px; font-size: 13px; }
   .menu-toggle { padding: 8px 11px; }
-  .price { font-size: 46px; }
   .review-badge { right: 12px; bottom: 12px; font-size: 11px; }
   #included .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   #included .card { padding: 18px 14px; }
